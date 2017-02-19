@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ledaq', 'PostsController@ledaq');
+
+Route::get('/detail/{id?}', 'PostsController@detail');
