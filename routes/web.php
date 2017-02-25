@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/ledaq', 'PostsController@ledaq');
 
 Route::get('/detail/{id?}', 'PostsController@detail');
+
+Route::get('/create', 'PostsController@create');
+
+Route::post('/store', 'PostsController@store');
+
+Route::get('/category/{id?}', 'PostsController@showCategory');

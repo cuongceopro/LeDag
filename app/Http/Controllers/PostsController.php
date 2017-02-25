@@ -29,4 +29,49 @@ class PostsController extends BaseController
       return View::make('single')->with('post', $post);
     }
 
+    public function store(Request $request)
+    {
+      $rules = [
+        'title' => 'required',
+        'content'=>'required',
+        'cat_id' => 'required'
+      ];
+
+      $messages = array(
+        'title.required' => 'タイトルを正しく入力してください。',
+        'content.required' => '本文を正しく入力してください。',
+        'cat_id.required' => 'カテゴリーを選択してください。',
+      );
+
+      $validator = Validator::make(Request::all(), $rules, $messages);
+
+      if ($validator->passes()) {
+        $post = new Post;
+        $post->title = Request::input('title');
+        $post->content = Request::input('content');
+        $post->cat_id = Request::input('cat_id');
+        $post->comment_count = 0;
+        $post->save();
+        return Redirect::back()
+        ->with('message', '投稿が完了しました。');
+      }else{
+        return Redirect::back()
+        ->withErrors($validator)
+        ->withInput();
+      }
+    }
+
+    public function create()
+    {
+      $post = Post::all();
+      return View::make('create')->with('post', $post);
+    }
+
+    public function showCategory($id)
+    {
+      $category_posts = Post::where('cat_id', $id)->get();
+
+      return View::make('category')
+        ->with('category_posts', $category_posts);
+    }
 }
