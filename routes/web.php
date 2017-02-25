@@ -17,6 +17,12 @@ Route::get('/', function () {
 
 Route::get('/ledaq', 'PostsController@ledaq');
 
+Route::get('/company', 'PostsController@company');
+
+Route::get('/shopping', 'PostsController@shopping');
+
+Route::get('/contact', 'PostsController@contact');
+
 Route::get('/detail/{id?}', 'PostsController@detail');
 
 Route::get('/create', 'PostsController@create');

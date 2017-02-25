@@ -26,11 +26,11 @@
 
 <nav id="menubar">
 <ul>
-<li><a href="company.html">ABOUT US</a></li>
+<li><a href="{!! URL::to('company') !!}">ABOUT US</a></li>
 <li><a href="info.html">COLLECTION</a></li>
 <li><a href="shopping.html">EVENTS & NEWS</a></li>
-<li><a href="shopping.html">SHOPPING</a></li>
-<li><a href="contact.html">CONTACT</a></li>
+<li><a href="{!! URL::to('shopping') !!}">SHOPPING</a></li>
+<li><a href="{!! URL::to('contact') !!}">CONTACT</a></li>
 </ul>
 </nav>
 
@@ -40,42 +40,9 @@
 
 <div id="main">
 
-<aside id="mainimg">
-<img class="slide_file" src="images/1.jpg" title="index.html">
-<img class="slide_file" src="images/2.jpg" title="index.html">
-<img class="slide_file" src="images/3.jpg" title="index.html">
-<input type="hidden" id="slide_loop" value="0">
-<a href="index.html" id="slide_link">
-<img id="slide_image" src="images/1.jpg" alt="">
-<img id="slide_image2" src="images/1.jpg" alt=""></a>
-</aside>
-
-<section id="new" class="box">
-<h2 id="newinfo_hdr" class="close">更新情報・お知らせ</h2>
-<dl id="newinfo">
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル<img src="images/icon_new.gif" alt="NEW" width="30" height="11"></dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル<img src="images/icon_up.gif" alt="UP" width="30" height="11"></dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-</dl>
+<section>
+<h2>会社情報</h2>
 </section>
-
-<section class="box">
-<h2>Staff</h2>
-<p>ここに動画を入れます。</p>
-</section>
-
-
 
 </div>
 <!--/main-->
@@ -116,9 +83,9 @@
 </div>
 <!--/sub-->
 
+
 </div>
 <!--/contents in-->
-
 
 <ul id="footermenu">
 <li><a href="index.html">ホーム</a></li>
@@ -131,17 +98,15 @@
 <!--/contents-->
 
 <footer>
-<small>Copyright&copy; 2017 <a href="index.html">LeDag Shop</a> All Rights Reserved.</small>
+<small>Copyright&copy; 2015 <a href="index.html">Sample Online Shop</a> All Rights Reserved.</small>
 <span class="pr"><a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
 </footer>
 
-<!--スライドショースクリプト-->
-<script type="text/javascript" src="js/slide_simple_pack.js"></script>
-
-<!--スマホ用更新情報-->
+<!--スマホ用メニューバー-->
+<img src="images/icon_bar.png" width="20" height="16" alt="" id="menubar_hdr" class="close">
 <script type="text/javascript">
 if (OCwindowWidth() < 480) {
-  open_close("newinfo_hdr", "newinfo");
+	open_close("menubar_hdr", "menubar");
 }
 </script>
 
