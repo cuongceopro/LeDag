@@ -7,19 +7,19 @@
   <meta name="copyright" content="Template Party">
   <meta name="description" content="ここにサイト説明を入れます">
   <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{{asset('css/style.css')}}}">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="js/openclose.js"></script>
-  <script type="text/javascript" src="js/calender.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="/js/openclose.js"></script>
+  <script type="text/javascript" src="/js/calender.js" charset="UTF-8"></script>
 </head>
 
 <body class= "c2">
 
 <header>
 <div class="inner">
-<p id="logo"><a href="index.html"><img src="images/logo.png" width="220" height="30" alt=""></a></p>
+<p id="logo"><a href="index.html"><img src="{{{asset('images/logo.png')}}}" width="220" height="30" alt=""></a></p>
 <p id="cart"><a href="#">カートをみる</a></p>
 </div>
 </header>
@@ -40,8 +40,18 @@
 
 <div id="main">
 
-<section>
-<h2>会社情報</h2>
+<section class="box">
+<h2>COLLECTION</h2>
+@foreach($category_posts as $category_post)
+
+	<h3>タイトル：{{ $category_post->title }}
+		<small>投稿日：{{ date("Y年 m月 d日",strtotime($category_post->created_at)) }}</small>
+	</h3>
+	<p>{{ $category_post->content }}</p>
+  <a href="{!! URL::to('detail/'.$category_post->id.'') !!}">続きを読む</a>
+	<hr />
+@endforeach
+
 </section>
 
 </div>
@@ -67,7 +77,7 @@
 <h2>カレンダー</h2>
 <div id="cal1" style="padding:10px"></div>
 <div id="cal2" style="padding:10px"></div>
-<p><img src="images/sample_cal.png" width="188" height="140"><br>
+<p><img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>
 </section>
 
 <aside>
@@ -103,7 +113,7 @@
 </footer>
 
 <!--スマホ用メニューバー-->
-<img src="images/icon_bar.png" width="20" height="16" alt="" id="menubar_hdr" class="close">
+<img src="{{{asset('images/icon_bar.png')}}}" width="20" height="16" alt="" id="menubar_hdr" class="close">
 <script type="text/javascript">
 if (OCwindowWidth() < 480) {
 	open_close("menubar_hdr", "menubar");

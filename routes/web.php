@@ -21,6 +21,10 @@ Route::get('/company', 'PostsController@company');
 
 Route::get('/shopping', 'PostsController@shopping');
 
+Route::get('/collection', 'PostsController@collection');
+
+Route::get('/eventnews', 'PostsController@eventnews');
+
 Route::get('/contact', 'PostsController@contact');
 
 Route::get('/detail/{id?}', 'PostsController@detail');

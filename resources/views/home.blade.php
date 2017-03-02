@@ -27,8 +27,8 @@
 <nav id="menubar">
 <ul>
 <li><a href="{!! URL::to('company') !!}">ABOUT US</a></li>
-<li><a href="info.html">COLLECTION</a></li>
-<li><a href="shopping.html">EVENTS & NEWS</a></li>
+<li><a href="{!! URL::to('collection') !!}">COLLECTION</a></li>
+<li><a href="{!! URL::to('eventnews') !!}">EVENTS & NEWS</a></li>
 <li><a href="{!! URL::to('shopping') !!}">SHOPPING</a></li>
 <li><a href="{!! URL::to('contact') !!}">CONTACT</a></li>
 </ul>
@@ -53,20 +53,10 @@
 <section id="new" class="box">
 <h2 id="newinfo_hdr" class="close">更新情報・お知らせ</h2>
 <dl id="newinfo">
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル<img src="images/icon_new.gif" alt="NEW" width="30" height="11"></dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル<img src="images/icon_up.gif" alt="UP" width="30" height="11"></dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
-<dt><time datetime="2014-00-00">2015/00/00</time></dt>
-<dd>ホームページリニューアル</dd>
+  @foreach($posts as $post)
+    <dt><time datetime="2014-00-00"></time>{{ date("Y/m/d",strtotime($post->created_at)) }}</dt>
+    <dd>{{ $post->title }}</dd>
+  @endforeach
 </dl>
 </section>
 

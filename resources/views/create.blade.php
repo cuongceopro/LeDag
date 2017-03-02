@@ -31,7 +31,7 @@
 		<div class="">
 			<select name="cat_id" type="text" class="">
 				<option></option>
-				<option value="1" name="1">電化製品</option>
+				<option value="1" name="1">collection</option>
 				<option value="2" name="2">食品</option>
 			</select>
 		</div>

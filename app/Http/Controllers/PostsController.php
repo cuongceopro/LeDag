@@ -28,6 +28,24 @@ class PostsController extends BaseController
       return View::make('company');
     }
 
+    public function collection()
+    {
+      $category_posts = Post::where('cat_id', '1')->get();
+
+      return View::make('collection')
+        ->with('category_posts', $category_posts);
+
+    }
+
+    public function eventnews()
+    {
+      $category_posts = Post::where('cat_id', '2')->get();
+
+      return View::make('eventnews')
+        ->with('category_posts', $category_posts);
+
+    }
+
     public function contact()
     {
       return View::make('contact');

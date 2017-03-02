@@ -26,8 +26,8 @@
 <nav id="menubar">
 <ul>
 <li><a href="{!! URL::to('company') !!}">ABOUT US</a></li>
-<li><a href="info.html">COLLECTION</a></li>
-<li><a href="shopping.html">EVENTS & NEWS</a></li>
+<li><a href="{!! URL::to('collection') !!}">COLLECTION</a></li>
+<li><a href="{!! URL::to('eventnews') !!}">EVENTS & NEWS</a></li>
 <li><a href="{!! URL::to('shopping') !!}">SHOPPING</a></li>
 <li><a href="{!! URL::to('contact') !!}">CONTACT</a></li>
 </ul>
