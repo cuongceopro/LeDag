@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="ja">
 <head>
   <meta charset="utf-8">
   <title>LeDag Shop</title>
@@ -9,11 +11,10 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="/js/openclose.js"></script>
-  <script type="text/javascript" src="/js/calender.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="js/openclose.js"></script>
 </head>
 
-<body class= "c2">
+<body class = "c2">
 
   <header>
     <div class="inner">
@@ -38,16 +39,19 @@
 
       <div id="main">
 
-        <section class="box">
-          <h2>COLLECTION</h2>
-          @foreach($category_posts as $category_post)
+        <section>
 
-          <h3>タイトル：{{ $category_post->title }}
-            <small>投稿日：{{ date("Y年 m月 d日",strtotime($category_post->created_at)) }}</small>
-          </h3>
-          <p>{{ $category_post->content }}</p>
-          <a href="{!! URL::to('detail/'.$category_post->id.'') !!}">続きを読む</a>
-          <hr />
+          <h2>SHOPPING</h2>
+          <p>販売商品のご案内。</p>
+
+          @foreach($goodcategory_goods as $category_good)
+          <section class="list">
+            <a href="item.html">
+              <h4>商品名：{{ $category_good->name }}</h4>
+              <figure><img src="images/sample2.jpg" alt="商品名をここに入れます"></figure>
+              <p>{{ $category_good->detail }}</p>
+            </a>
+          </section>
           @endforeach
 
         </section>
@@ -75,7 +79,7 @@
           <h2>カレンダー</h2>
           <div id="cal1" style="padding:10px"></div>
           <div id="cal2" style="padding:10px"></div>
-          <p><img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>
+          <p><img src="images/sample_cal.png" width="188" height="140"><br>
           </section>
 
           <aside>
@@ -89,33 +93,30 @@
           </aside>
 
         </div>
-        <!--/sub-->
+        <!--/side-->
 
+        <ul id="footermenu">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+
+        <p id="pagetop"><a href="#">↑ PAGE TOP</a></p>
 
       </div>
-      <!--/contents in-->
+      <!--/contents-->
 
-      <ul id="footermenu">
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-      </ul>
+      <footer>
+        <small>Copyright&copy; 2015 <a href="index.html">Sample Online Shop</a> All Rights Reserved.</small>
+        <span class="pr"><a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
+      </footer>
 
-      <p id="pagetop"><a href="#">↑ PAGE TOP</a></p>
+      <!--スマホ用メニューバー-->
+      <img src="images/icon_bar.png" width="20" height="16" alt="" id="menubar_hdr" class="close">
+      <script type="text/javascript">
+      if (OCwindowWidth() < 480) {
+        open_close("menubar_hdr", "menubar");
+      }
+      </script>
 
-    </div>
-    <!--/contents-->
-
-    <footer>
-      <small>Copyright&copy; 2015 <a href="index.html">Sample Online Shop</a> All Rights Reserved.</small>
-      <span class="pr"><a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
-    </footer>
-
-    <!--スマホ用メニューバー-->
-    <img src="{{{asset('images/icon_bar.png')}}}" width="20" height="16" alt="" id="menubar_hdr" class="close">
-    <script type="text/javascript">
-    if (OCwindowWidth() < 480) {
-      open_close("menubar_hdr", "menubar");
-    }
-    </script>
-
-  </body>
+    </body>
+    </html>

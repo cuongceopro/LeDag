@@ -103,6 +103,7 @@ class PostsController extends BaseController
       return View::make('create')->with('post', $post);
     }
 
+    /*
     public function showCategory($id)
     {
       $category_posts = Post::where('cat_id', $id)->get();
@@ -110,4 +111,14 @@ class PostsController extends BaseController
       return View::make('category')
         ->with('category_posts', $category_posts);
     }
+    */
+
+    public function showCategory($id)
+    {
+      $category_posts = Post::where('cat_id', $id)->get();
+
+      return View::make('category')
+        ->with('category_posts', $category_posts);
+    }
+
 }

@@ -33,4 +33,4 @@ Route::get('/create', 'PostsController@create');
 
 Route::post('/store', 'PostsController@store');
 
-Route::get('/category/{id?}', 'PostsController@showCategory');
+Route::get('/category/{id?}', 'GoodsController@showCategory');
