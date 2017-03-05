@@ -16,19 +16,19 @@ public function run(){
 		$good = new App\Good;
 		$good->name = "$i 番目の投稿";
 		$good->detail = $detail;
-		$good->cat_id = 1;
+		$good->cat_id = 6;
 		$good->cost = $cost;
 		$good->save();
 	}
 
 	// カテゴリーを追加する
-	$cat1 = new App\GoodCategory;
-	$cat1->name = "ハンカチ";
-	$cat1->save();
+	//$cat1 = new App\GoodCategory;
+	//$cat1->name = "ハンカチ";
+	//$cat1->save();
 
-	$cat2 = new App\GoodCategory;
-	$cat2->name = "男性服";
-	$cat2->save();
+	//$cat2 = new App\GoodCategory;
+	//$cat2->name = "男性服";
+	//$cat2->save();
 
 }
 }
