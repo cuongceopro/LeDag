@@ -10,9 +10,9 @@
 
     @foreach($goodcategory_goods as $category_good)
     <section class="list">
-      <a href="item.html">
+      <a href="{!! URL::to('/good/'.$category_good->id.'') !!}">
         <h4>商品名：{{ $category_good->name }}</h4>
-        <figure><img src="images/sample2.jpg" alt="商品名をここに入れます"></figure>
+        <figure><img src="{{{asset('images/sample2.jpg')}}}" alt="商品名をここに入れます"></figure>
         <p>{{ $category_good->detail }}</p>
       </a>
     </section>

@@ -23,4 +23,10 @@ class GoodsController extends BaseController
         ->with('goodcategory_goods', $goodcategory_goods);
     }
 
+    public function good($id)
+    {
+      $good = Good::find($id);
+      return View::make('good')->with('good', $good);
+    }
+
 }
