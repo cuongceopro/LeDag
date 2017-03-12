@@ -5,6 +5,7 @@
 
   <section class="box">
     <h2>EVENT&NEWS</h2>
+    <br />
     @foreach($category_posts as $category_post)
 
     <h3>タイトル：{{ $category_post->title }}

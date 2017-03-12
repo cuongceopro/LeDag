@@ -9,6 +9,35 @@
     <p>販売商品のご案内。</p>
 
     @foreach($goodcategory_goods as $category_good)
+      <div class="well well-small">
+        <div class="row-fluid">
+
+          <div class="span2">
+            <img src="{{{asset('images/a.jpg')}}}" alt="">
+          </div>
+
+          <div class="span6">
+            <h5 class="shop">{{ $category_good->name }}</h5>
+            <p>
+              {{ $category_good->detail }}
+            </p>
+          </div>
+          <div class="span4 alignR">
+            <form class="form-horizontal qtyFrm">
+              <div class="shop">¥{{ $category_good->cost }}</div>
+              <div class="btn-group">
+                <a href="product_details.html" class="defaultBtn"><span class=" icon-shopping-cart"></span> Add to cart</a>
+                <a href="{!! URL::to('/good/'.$category_good->id.'') !!}" class="shopBtn">VIEW</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      @endforeach
+
+
+      <!--
+    @foreach($goodcategory_goods as $category_good)
     <section class="list">
       <a href="{!! URL::to('/good/'.$category_good->id.'') !!}">
         <h4>商品名：{{ $category_good->name }}</h4>
@@ -17,6 +46,9 @@
       </a>
     </section>
     @endforeach
+  -->
+
+
 
   </section>
 

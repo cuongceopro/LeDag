@@ -8,11 +8,15 @@
   <meta name="description" content="ここにサイト説明を入れます">
   <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
   <link rel="stylesheet" href="{{{asset('css/style.css')}}}">
+  <link rel="stylesheet" href="{{{asset('css/bootstrap-responsive.css')}}}">
+  <link rel="stylesheet" href="{{{asset('css/bootstrap-responsive.min.css')}}}">
+  <!--<link rel="stylesheet" href="{{{asset('css/bootstrap.css')}}}">-->
+  <link rel="stylesheet" href="{{{asset('css/bootstrap.min.css')}}}">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <script type="text/javascript" src="js/openclose.js"></script>
-  <script type="text/javascript" src="js/calender.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="{{{asset('js/calender.js')}}}" charset="UTF-8"></script>
 </head>
 
 <body class= "c2">
@@ -60,7 +64,7 @@
             <h2>カレンダー</h2>
             <div id="cal1" style="padding:10px"></div>
             <div id="cal2" style="padding:10px"></div>
-            <p><img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>
+            <img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>
             </section>
 
             <aside>

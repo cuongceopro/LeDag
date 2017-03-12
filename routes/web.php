@@ -31,6 +31,8 @@ Route::get('/detail/{id?}', 'PostsController@detail');
 
 Route::get('/good/{id?}', 'GoodsController@good');
 
+Route::get('/cart', 'GoodsController@cart');
+
 Route::get('/create', 'PostsController@create');
 
 Route::post('/store', 'PostsController@store');

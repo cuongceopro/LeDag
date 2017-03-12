@@ -29,4 +29,9 @@ class GoodsController extends BaseController
       return View::make('good')->with('good', $good);
     }
 
+    public function cart()
+    {
+      return View::make('cart');
+    }
+
 }
