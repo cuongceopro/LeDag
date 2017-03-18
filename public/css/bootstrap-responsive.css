@@ -929,3 +929,26 @@ text-rendering: optimizelegibility;
 .carousel-caption p {
   margin-bottom: 0;
 }
+
+.h3_shop {
+  margin: 10px 0;
+font-family: inherit;
+font-weight: bold;
+line-height: 20px;
+color: inherit;
+text-rendering: optimizelegibility;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.clr{clear:both;}
+
+.h4_shop {
+  margin: 10px 0;
+font-family: inherit;
+font-weight: bold;
+line-height: 20px;
+color: inherit;
+text-rendering: optimizelegibility;
+  font-size: 17.5px;
+}
