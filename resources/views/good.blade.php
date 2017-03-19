@@ -43,12 +43,12 @@
         -->
     </div>
     <div class="span7">
-      <div class="h3_shop">Name of the Item [$140.00]</div>
+      <div class="h3_shop">{{ $good->name }} [¥{{ $good->cost}}]</div>
       <hr class="soft"/>
 
-      <form class="form-horizontal qtyFrm">
+      <form class="form-horizontal qtyFrm" action="{!! URL::to('/cart/'.$good->id.'') !!}" method="get">
         <div class="control-group">
-        <label class="control-label"><span>$140.00</span></label>
+        <label class="control-label"><span>¥{{ $good->cost}}</span></label>
         <div class="controls">
         <input type="number" class="span6" placeholder="Qty.">
         </div>

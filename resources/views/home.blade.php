@@ -13,6 +13,11 @@
       <img id="slide_image2" src="images/1.jpg" alt=""></a>
     </aside>
 
+    <?php
+      session_start();
+      unset($_SESSION['cart']);
+     ?>
+
     <section id="new" class="box">
       <h2 id="newinfo_hdr" class="close">更新情報・お知らせ</h2>
       <dl id="newinfo">
