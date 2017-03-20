@@ -179,6 +179,8 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
 
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+
     ],
 
     /*
@@ -229,7 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,  // 追加
         'Html' => Collective\Html\HtmlFacade::class,  // 追加
-
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
 
     ],
 

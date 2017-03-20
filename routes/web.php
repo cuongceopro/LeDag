@@ -31,10 +31,26 @@ Route::get('/detail/{id?}', 'PostsController@detail');
 
 Route::get('/good/{id?}', 'GoodsController@good');
 
-Route::get('/cart/{id?}', 'GoodsController@cart');
+//Route::get('/cart/{id?}', 'GoodsController@cart');
 
 Route::get('/create', 'PostsController@create');
 
 Route::post('/store', 'PostsController@store');
 
 Route::get('/category/{id?}', 'GoodsController@showCategory');
+
+Route::post('/cart', 'Front@cart');
+
+Route::get('/products', 'Front@products');
+
+Route::get('/add', 'GoodsController@add');
+
+
+Route::get('/', function () {
+    return redirect('shop');
+});
+
+Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
+
+Route::resource('cart', 'CartController');
+Route::delete('emptyCart', 'CartController@emptyCart');

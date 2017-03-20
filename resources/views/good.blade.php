@@ -46,7 +46,8 @@
       <div class="h3_shop">{{ $good->name }} [¥{{ $good->cost}}]</div>
       <hr class="soft"/>
 
-      <form class="form-horizontal qtyFrm" action="{!! URL::to('/cart/'.$good->id.'') !!}" method="get">
+      <!--<form class="form-horizontal qtyFrm" action="{!! URL::to('/cart/'.$good->id.'') !!}" method="get">-->
+        <form class="form-horizontal qtyFrm" action="{!! URL::to('/cart') !!}" method="post">
         <div class="control-group">
         <label class="control-label"><span>¥{{ $good->cost}}</span></label>
         <div class="controls">
@@ -80,6 +81,10 @@
         <p>Nowadays the lingerie industry is one of the most successful business spheres.
         Nowadays the lingerie industry is one of ...
         <p>
+          <input type="hidden" name="id" value="{{ $good->id }}">
+          <input type="hidden" name="name" value="{{ $good->name }}">
+          <input type="hidden" name="price" value="{{ $good->cost }}">
+        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Add to cart</button>
       </form>
     </div>
