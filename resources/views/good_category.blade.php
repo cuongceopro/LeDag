@@ -26,7 +26,14 @@
             <form class="form-horizontal qtyFrm">
               <div class="shop">¥{{ $category_good->cost }}</div>
               <div class="btn-group">
-                <a href="product_details.html" class="defaultBtn"><span class=" icon-shopping-cart"></span> Add to cart</a>
+                <form class="form-horizontal qtyFrm" action="{!! URL::to('/cart') !!}" method="post">
+                <input type="hidden" name="id" value="{{ $category_good->id }}">
+                <input type="hidden" name="name" value="{{ $category_good->name }}">
+                <input type="hidden" name="price" value="{{ $category_good->cost }}">
+                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Add to cart</button>
+              </form>
+                <!--<a href="product_details.html" class="defaultBtn"><span class=" icon-shopping-cart"></span> Add to cart</a>-->
                 <a href="{!! URL::to('/good/'.$category_good->id.'') !!}" class="shopBtn">VIEW</a>
               </div>
             </form>

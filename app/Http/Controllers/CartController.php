@@ -116,4 +116,13 @@ class CartController extends Controller
         return redirect('cart')->withSuccessMessage('Item has been moved to your Wishlist!');
 
     }
+
+    public function cart_input()
+    {
+      //$goodcategory_goods = Good::where('cat_id', $id)->get();
+
+      return view('cart_input');
+    }
+
+
 }
