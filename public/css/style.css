@@ -976,3 +976,19 @@ body.s-n #side {
 	background: #ced8ff;	/*背景色*/
 	color: #666;			/*文字色*/
 }
+
+#company_map {
+float:left;
+width:400px;
+height:300px;
+/*border:dashed 1px #999;*/
+margin:10px 10px 10px 0px;
+}
+
+#company_access {
+float:right;
+width:350px;
+height:300px;
+/*border:dashed 1px #999;*/
+margin:10px 0px 10px 0px;
+}
