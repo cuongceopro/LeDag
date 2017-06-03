@@ -6,6 +6,10 @@
   <section>
 
     <h2>お問い合わせ</h2>
+    <p>
+      お問い合わせは、お電話(03-5849-4079)にてお問い合わせいただくか、下記の入力画面に必要事項を
+      ご記入いただき、入力画面の最後にある「送信する」ボタンよりお問い合わせください。
+    </p>
     <table class="ta1 mb15">
       <tr>
         <th colspan="2" class="tamidashi">※マークは入力必須です</th>
@@ -15,8 +19,8 @@
         <td><input type="text" name="お名前" size="30" class="ws"></td>
       </tr>
       <tr>
-        <th>メールアドレス※</th>
-        <td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+        <th>フリガナ</th>
+        <td><input type="text" name="フリガナ" size="30" class="ws"></td>
       </tr>
       <tr>
         <th>ご住所(都道府県)</th>
@@ -77,13 +81,44 @@
           <td><input type="text" name="ご住所(市区町村以下)" size="30" class="wl"></td>
         </tr>
         <tr>
-          <th>お問い合わせ項目※</th>
+          <th>電話番号(携帯電話)※</th>
+          <td><input type="text" name="電話番号" size="30" class="ws"></td>
+        </tr>
+        <tr>
+          <th>メールアドレス※</th>
+          <td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+        </tr>
+        <tr>
+          <th>ご用件※</th>
           <td>
-            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目１">お問い合わせ項目１</label><br>
-            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目２">お問い合わせ項目２</label><br>
-            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目３">お問い合わせ項目３</label><br>
-            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目４">お問い合わせ項目４</label><br>
-            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目５">お問い合わせ項目５</label>
+            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目１">オーダーのご予約</label><br>
+            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目２">フィッチング(お直し)のご予約</label><br>
+            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目３">お問い合わせ</label>
+          </td>
+        </tr>
+        <tr>
+          <th>オーダー/フィッテング第一希望</th>
+          <td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+        </tr>
+        <tr>
+          <th>オーダー/フィッテング参加希望人数(合計)</th>
+          <td>
+            <select name="ご住所(都道府県)">
+              <option value="" selected="selected">人数</option>
+              <option value="北海道">1</option>
+              <option value="青森県">2</option>
+              <option value="岩手県">3</option>
+              <option value="宮城県">4</option>
+              <option value="北海道">5</option>
+              <option value="青森県">6~10</option>
+              <option value="岩手県">10以上</option>
+            </select></td>
+        </tr>
+        <tr>
+          <th>今までLeDaqにお越しいただいたことがありますか。</th>
+          <td>
+            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目１">ある</label><br>
+            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目２">なし</label><br>
           </td>
         </tr>
         <tr>
