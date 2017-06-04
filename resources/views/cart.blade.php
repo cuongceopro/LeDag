@@ -46,6 +46,9 @@
         foreach (Cart::content() as $item)
         {
           print $item->id;
+          print '<br />';
+          print 'Quantity:';
+          print $item->qty;
           print '<tr>';
           print '<td><img width="100" src="/images/e.jpg" alt=""></td>';
           print '<td>'.$item->name.'<br>Carate : 22<br>Model : n/a</td>';
@@ -53,7 +56,7 @@
           print '<td><span class="shopBtn"><span class="icon-ok"></span></span> </td>';
           print '<td>'.$item->price.'</td>';
           print '<td>';
-          print '<input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text" value="2">';
+          print '<input class="span1" style="max-width:34px" placeholder="'.$item->qty.'" id="appendedInputButtons" size="16" type="text" value="'.$item->qty.'">';
           print '<div class="input-append">';
           print '<button class="btn btn-mini" type="button">-</button><button class="btn btn-mini" type="button"> + </button><button class="btn btn-mini btn-danger" type="button"><span class="icon-remove"></span></button>';
           print '</div>';

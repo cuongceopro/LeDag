@@ -13,7 +13,7 @@
         <div class="row-fluid">
 
           <div class="span2">
-            <img src="{{{asset('images/a.jpg')}}}" alt="">
+            <img src="{{{asset('images/product/1.jpg')}}}" alt="">
           </div>
 
           <div class="span6">

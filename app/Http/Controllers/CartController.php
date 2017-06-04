@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use \Cart as Cart;
 use Validator;
+//use Request;
 
 class CartController extends Controller
 {
@@ -18,6 +19,7 @@ class CartController extends Controller
      */
     public function index()
     {
+      //$quantity = $request->input('quantity');
         return view('cart');
     }
 
@@ -37,8 +39,10 @@ class CartController extends Controller
             //return redirect('cart');
         //}
 
-        Cart::add($request->id, $request->name, 1, $request->price)->associate('App\Good');
-        return redirect('cart')->withSuccessMessage('Item was added to your cart!');
+        $quantity = $request->input('quantity');
+
+        Cart::add($request->id, $request->name, $quantity, $request->price)->associate('App\Good');
+        return redirect('cart')->withSuccessMessage('Item was added to your cart!')->with('quantity',$quantity);
     }
 
     /**
