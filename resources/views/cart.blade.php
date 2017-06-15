@@ -86,8 +86,8 @@
     </form>
   </div>
 
-    <a href="products.html" class="shopBtn btn-large"><span class="icon-arrow-left"></span> Continue Shopping </a>
-    <a href="{{{asset('/cart_input')}}}" class="shopBtn btn-large pull-right">Next <span class="icon-arrow-right"></span></a>
+    <a href="products.html" class="shopBtn"><span class="icon-arrow-left"></span> Continue Shopping </a>
+    <a href="{{{asset('/cart_input')}}}" class="shopBtn pull-right">Next <span class="icon-arrow-right"></span></a>
 
   </div>
 

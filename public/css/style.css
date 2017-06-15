@@ -38,6 +38,7 @@ table {
 ---------------------------------------------------------------------------*/
 a {
 	color: #333;	/*リンクテキストの色*/
+	text-decoration: none;
 }
 a:hover {
 	color: #958574;			/*マウスオン時の文字色（全体）*/
@@ -991,4 +992,8 @@ width:350px;
 height:300px;
 /*border:dashed 1px #999;*/
 margin:10px 0px 10px 0px;
+}
+
+button#nothing {
+  margin:0px 0px 0px 0px;
 }

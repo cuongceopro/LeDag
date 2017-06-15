@@ -18,23 +18,30 @@
 
   <div class="well well-small">
 <div class="row-fluid">
-  <div class="span5">
-  <div id="myCarousel" class="carousel slide cntr">
-            <div class="carousel-inner">
-              <div class="item active">
-               <a href="#"> <img src="{{{asset('images/product/1.jpg')}}}" alt="" style="width:100%"></a>
+    <div class="span5">
+      <div class="carousel-inner">
+      <div class="item">
+      <a href="#"> <img src="{{{asset('images/product/1.jpg')}}}" alt="" style="width:100%"></a>
+      </div>
+    </div>
+      <!--
+    <div id="myCarousel" class="carousel slide cntr">
+              <div class="carousel-inner">
+                <div class="item active">
+                 <a href="#"> <img src="assets/img/a.jpg" alt="" style="width:100%"></a>
+                </div>
+                <div class="item">
+                   <a href="#"> <img src="assets/img/b.jpg" alt="" style="width:100%"></a>
+                </div>
+                <div class="item">
+                  <a href="#"> <img src="assets/img/e.jpg" alt="" style="width:100%"></a>
+                </div>
               </div>
-              <div class="item">
-                 <a href="#"> <img src="{{{asset('images/product/1.jpg')}}}" alt="" style="width:100%"></a>
-              </div>
-              <div class="item">
-                <a href="#"> <img src="{{{asset('images/product/1.jpg')}}}" alt="" style="width:100%"></a>
-              </div>
-            </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-        </div>
-  </div>
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+          </div>
+        -->
+    </div>
     <div class="span7">
       <div class="h3_shop">{{ $good->name }}</div>
       <hr class="soft"/>

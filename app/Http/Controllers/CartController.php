@@ -41,6 +41,10 @@ class CartController extends Controller
 
         $quantity = $request->input('quantity');
 
+        if($quantity <= 0) {
+          $quantity = 1;
+        }
+
         Cart::add($request->id, $request->name, $quantity, $request->price)->associate('App\Good');
         return redirect('cart')->withSuccessMessage('Item was added to your cart!')->with('quantity',$quantity);
     }

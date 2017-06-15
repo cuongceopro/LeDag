@@ -8,6 +8,11 @@
   <meta name="description" content="ここにサイト説明を入れます">
   <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
   <link rel="stylesheet" href="{{{asset('css/style.css')}}}">
+  <link rel="stylesheet" href="{{{asset('css/style_add.css')}}}">
+  <!--
+  <link rel="stylesheet" href="{{{asset('css/bootstrap_add.css')}}}">
+  <link rel="stylesheet" href="{{{asset('css/bootstrap_add1.css')}}}">
+-->
   <link rel="stylesheet" href="{{{asset('css/bootstrap-responsive.css')}}}">
   <link rel="stylesheet" href="{{{asset('css/bootstrap-responsive.min.css')}}}">
   <!--<link rel="stylesheet" href="{{{asset('css/bootstrap.css')}}}">-->
@@ -15,6 +20,10 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <!-- Bootstrap styles -->
+  <link href="{{{asset('assets/css/bootstrap.css')}}}" rel="stylesheet"/>
+  <!-- font awesome styles -->
+  <link href="{{{asset('assets/font-awesome/css/font-awesome.css')}}}" rel="stylesheet">
   <script type="text/javascript" src="js/openclose.js"></script>
   <script type="text/javascript" src="{{{asset('js/calender.js')}}}" charset="UTF-8"></script>
 </head>
@@ -28,17 +37,28 @@
     </div>
   </header>
 
+
   <nav id="menubar">
     <ul>
       <li><a href="{!! URL::to('company') !!}">ABOUT US</a></li>
-      <!--<li><a href="{!! URL::to('collection') !!}">COLLECTION</a></li>-->
       <li><a href="{!! URL::to('eventnews') !!}">EVENTS & NEWS</a></li>
       <li><a href="{!! URL::to('category/2') !!}">AKIKALE</a></li>
       <li><a href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
-      <!--<li><a href="{!! URL::to('shopping') !!}">SHOPPING</a></li>-->
       <li><a href="{!! URL::to('contact') !!}">CONTACT</a></li>
     </ul>
   </nav>
+
+  <!--
+  <div id="menubar">
+    <ul >
+      <li id="test1"><a id="test2" href="{!! URL::to('company') !!}">ABOUT US</a></li>
+      <li id="test1"><a id="test2" href="{!! URL::to('eventnews') !!}">EVENTS & NEWS</a></li>
+      <li id="test1"><a id="test2" href="{!! URL::to('category/2') !!}">AKIKALE</a></li>
+      <li id="test1"><a id="test2" href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
+      <li id="test1"><a id="test2" href="{!! URL::to('contact') !!}">CONTACT</a></li>
+    </ul>
+  </div>
+-->
 
   <div id="contents">
 
@@ -101,6 +121,11 @@
 
       <!--スライドショースクリプト-->
       <script type="text/javascript" src="js/slide_simple_pack.js"></script>
+      <script src="{{{asset('assets/js/jquery.js')}}}"></script>
+  	  <script src="{{{asset('assets/js/bootstrap.min.js')}}}"></script>
+  	  <script src="{{{asset('assets/js/jquery.easing-1.3.min.js')}}}"></script>
+      <script src="{{{asset('assets/js/jquery.scrollTo-1.4.3.1-min.js')}}}"></script>
+      <script src="{{{asset('assets/js/shop.js')}}}"></script>
 
       <!--スマホ用更新情報-->
       <script type="text/javascript">
