@@ -56,3 +56,7 @@ Route::resource('cart', 'CartController');
 Route::delete('emptyCart', 'CartController@emptyCart');
 
 Route::get('cart_input', 'CartController@cart_input');
+
+Route::get('/reduce/{rowId}', 'CartController@reduce');
+Route::get('/increase/{rowId}', 'CartController@increase');
+Route::get('/delete_item/{rowId}', 'CartController@delete_item');

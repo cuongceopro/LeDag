@@ -75,6 +75,33 @@ class CartController extends Controller
 
     }
 
+    //数を減らす
+    public function reduce(Request $request, $rowId)
+    {
+        $item = Cart::get($rowId);
+        Cart::update($rowId, $item->qty - 1);
+
+        return redirect('cart');
+    }
+
+    //数を増やす
+    public function increase(Request $request, $rowId)
+    {
+        $item = Cart::get($rowId);
+        Cart::update($rowId, $item->qty + 1);
+
+        return redirect('cart');
+    }
+
+    //アイテムを削除
+    public function delete_item(Request $request, $rowId)
+    {
+        //$item = Cart::get($rowId);
+        Cart::update($rowId, 0);
+
+        return redirect('cart');
+    }
+
     /**
      * Remove the specified resource from storage.
      *

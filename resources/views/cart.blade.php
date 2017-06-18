@@ -8,7 +8,7 @@
   <?php
   //session_start();
   //if(isset($_SESSION['cart']) == true){
-    //$cart = $_SESSION['cart'];
+  //$cart = $_SESSION['cart'];
   //}
   //$cart[] = $good->id;
   //$_SESSION['cart'] = $cart;
@@ -42,10 +42,18 @@
 
         <?php
 
+        //$item = Cart::search(function ($cartItem, $rowId){
+        //return $cartItem->id === '11';
+        //});
+
+        //print $item;
+
         //foreach($cart as $key => $val)
         foreach (Cart::content() as $item)
         {
-          //print $item->id;
+          //echo $item;
+          //print $item->rowId;
+          //print $test;
           //print '<br />';
           //print 'Quantity:';
           //print $item->qty;
@@ -59,7 +67,9 @@
           print '<td>';
           print '<input class="span1" style="max-width:34px" placeholder="'.$item->qty.'" id="appendedInputButtons" size="16" type="text" value="'.$item->qty.'">';
           print '<div class="input-append">';
-          print '<button class="btn btn-mini" type="button">-</button><button class="btn btn-mini" type="button"> + </button><button class="btn btn-mini btn-danger" type="button"><span class="icon-remove"></span></button>';
+          print '<a href = "/reduce/'.$item->rowId.'"><button class="btn btn-mini" type="button">-</button></a>';
+          print '<a href = "/increase/'.$item->rowId.'"><button class="btn btn-mini" type="button"> + </button></a>';
+          print '<a href = "/delete_item/'.$item->rowId.'"><button class="btn btn-mini btn-danger" type="button"><span class="icon-remove"></span></button></a>';
           print '</div>';
           print '</td>';
           print '<td>¥'.$item->subtotal.'</td>';
@@ -79,33 +89,34 @@
       </tbody>
     </table><br/>
 
-    <a href="products.html" class="shopBtn"><span class="icon-arrow-left"></span> Continue Shopping </a>
+    <a href="{!! URL::to('category/2') !!}" class="shopBtn"><span class="icon-arrow-left"></span> Continue Shopping </a>
 
     <div >
-    <form action="{{ url('/emptyCart') }}" method="POST">
+      <form action="{{ url('/emptyCart') }}" method="POST">
         {!! csrf_field() !!}
         <input type="hidden" name="_method" value="DELETE">
         <!--<input type="submit" class="btn btn-danger btn-lg" value="Empty Cart">-->
         <button type="submit" class="defaultBtn pull-right">Empty Cart</button>
+      </form>
+    </div>
+
+    <!--
+    <div >
+    <form action="{!! URL::to('/cart') !!}" method="put">
+    {!! csrf_field() !!}
+    <button type="submit" class="shopBtn pull-right">Recalculation</button>
     </form>
-  </div>
+    </div>
+    -->
 
-  <div >
-  <form action="{!! URL::to('/cart') !!}" method="put">
-      {!! csrf_field() !!}
-      <!--<input type="submit" class="btn btn-danger btn-lg" value="Empty Cart">-->
-      <button type="submit" class="shopBtn pull-right">Recalculation</button>
-  </form>
+
+<a href="{{{asset('/cart_input')}}}" class="shopBtn" >Next <span class="icon-arrow-right"></span></a>
+<!--<a style="float:right" href="{{{asset('/cart_input')}}}" class="shopBtn" >Next</a>-->
+
+
+
+
 </div>
-
-
-    <a href="{{{asset('/cart_input')}}}" class="shopBtn" >Next <span class="icon-arrow-right"></span></a>
-    <!--<a style="float:right" href="{{{asset('/cart_input')}}}" class="shopBtn" >Next</a>-->
-
-
-
-
-  </div>
 
 </div>
 
