@@ -80,12 +80,14 @@
             </ul>
           </nav>
 
+          <!--
           <section class="box">
             <h2>カレンダー</h2>
             <div id="cal1" style="padding:10px"></div>
             <div id="cal2" style="padding:10px"></div>
             <img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>
             </section>
+          -->
 
             <aside>
               <h2>オンライン限定セール</h2>

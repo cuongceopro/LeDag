@@ -3,6 +3,7 @@
 @section('page_content')
 <div id="main">
 
+
   <aside id="mainimg">
     <img class="slide_file" src="images/home/test4.JPEG" title="index.html">
     <img class="slide_file" src="images/home/test2.JPEG" title="index.html">
@@ -13,6 +14,18 @@
       <img id="slide_image2" src="images/home/test2.JPEG" alt=""></a>
     </aside>
 
+  <!--
+  <aside id="mainimg">
+  <img class="slide_file" src="images/1.jpg" title="index.html">
+  <img class="slide_file" src="images/2.jpg" title="index.html">
+  <img class="slide_file" src="images/3.jpg" title="index.html">
+  <input type="hidden" id="slide_loop" value="0">
+  <a href="index.html" id="slide_link">
+    <img id="slide_image" src="images/1.jpg" alt="">
+    <img id="slide_image2" src="images/1.jpg" alt=""></a>
+  </aside>
+  -->
+
     <?php
       session_start();
       unset($_SESSION['cart']);
@@ -20,6 +33,7 @@
 
     <section id="new" class="box">
       <h2 id="newinfo_hdr" class="close">更新情報・お知らせ</h2>
+      <!--<h2>更新情報・お知らせ</h2>-->
       <dl id="newinfo">
         @foreach($posts as $post)
         <a href="{!! URL::to('/detail/'.$post->id.'') !!}">
