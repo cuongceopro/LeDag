@@ -115,7 +115,7 @@
 <!--<a style="float:right" href="{{{asset('/cart_input')}}}" class="shopBtn" >Next</a>-->
 
   <section>
-    <form action="{!! URL::to('/cart') !!}" method="post">
+    <form action="{!! URL::to('/ledaq') !!}" method="post">
 
     <h3>お客様情報</h3>
     <table class="ta1 mb15">
@@ -192,6 +192,15 @@
           <th>電話番号※</th>
           <td><input type="text" name="ご住所(市区町村以下)" size="30" class="wl"></td>
         </tr>
+        <tr>
+          <th>お支払い方法※</th>
+          <td>
+            <select name="お支払い方法">
+              <option value="" selected="selected">お支払い方法</option>
+              <option value="北海道">口座振り込み</option>
+              <option value="北海道">代引き</option>
+            </select></td>
+          </tr>
         <tr>
           <th>その他（任意）</th>
           <td><textarea name="お問い合わせ詳細" cols="30" rows="10" class="wl"></textarea></td>

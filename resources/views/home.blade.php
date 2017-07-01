@@ -5,13 +5,13 @@
 
 
   <aside id="mainimg">
-    <img class="slide_file" src="images/home/test4.JPEG" title="index.html">
-    <img class="slide_file" src="images/home/test2.JPEG" title="index.html">
-    <img class="slide_file" src="images/home/test3.JPEG" title="index.html">
+    <img class="slide_file" src="images/home/test3_2_Fotor.jpg" title="index.html">
+    <img class="slide_file" src="images/home/test2_3_Fotor.jpg" title="index.html">
+    <img class="slide_file" src="images/home/test4_2_Fotor.jpg" title="index.html">
     <input type="hidden" id="slide_loop" value="0">
     <a href="index.html" id="slide_link">
-      <img id="slide_image" src="images/home/test4.JPEG" alt="">
-      <img id="slide_image2" src="images/home/test2.JPEG" alt=""></a>
+      <img id="slide_image" src="images/home/test3_2_Fotor.jpg" alt="">
+      <img id="slide_image2" src="images/home/test2_3_Fotor.jpg" alt=""></a>
     </aside>
 
   <!--
