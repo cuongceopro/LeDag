@@ -50,6 +50,10 @@ Route::get('/', function () {
     return redirect('shop');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
 
 Route::resource('cart', 'CartController');

@@ -24,8 +24,110 @@
   <link href="{{{asset('assets/css/bootstrap.css')}}}" rel="stylesheet"/>
   <!-- font awesome styles -->
   <link href="{{{asset('assets/font-awesome/css/font-awesome.css')}}}" rel="stylesheet">
+  <!--fullcalendar-->
+  <link href="{{{asset('css/fullcalendar.min.css')}}}" rel='stylesheet' />
+  <link href="{{{asset('css/fullcalendar.print.min.css')}}}" rel='stylesheet' media='print' />
+  <script src="{{{asset('js/moment.min.js')}}}"></script>
+  <script src="{{{asset('js/jquery.min.js')}}}"></script>
+  <script src="{{{asset('js/fullcalendar.min.js')}}}"></script>
+  <!--fullcalendar-->
   <script type="text/javascript" src="js/openclose.js"></script>
-  <script type="text/javascript" src="{{{asset('js/calender.js')}}}" charset="UTF-8"></script>
+  <script>
+
+  	$(document).ready(function() {
+
+  		$('#calendar').fullCalendar({
+  			header: {
+  				left: '',
+  				center: '',
+  				//right: 'month,basicWeek,basicDay'
+          right: ''
+  			},
+  			defaultDate: '2017-05-12',
+  			navLinks: true, // can click day/week names to navigate views
+  			editable: true,
+  			eventLimit: true, // allow "more" link when too many events
+  			events: [
+  				{
+  					title: 'Sale',
+  					start: '2017-05-01'
+  				},
+  				{
+  					title: 'KAORU Show',
+  					start: '2017-05-07',
+  					end: '2017-05-10'
+  				},
+  				// {
+  				// 	id: 999,
+  				// 	title: 'Repeating Event',
+  				// 	start: '2017-05-09T16:00:00'
+  				// },
+  				// {
+  				// 	id: 999,
+  				// 	title: 'Repeating Event',
+  				// 	start: '2017-05-16T16:00:00'
+  				// },
+  				// {
+  				// 	title: 'Conference',
+  				// 	start: '2017-05-11',
+  				// 	end: '2017-05-13'
+  				// },
+  				// {
+  				// 	title: 'Meeting',
+  				// 	start: '2017-05-12T10:30:00',
+  				// 	end: '2017-05-12T12:30:00'
+  				// },
+  				// {
+  				// 	title: 'Lunch',
+  				// 	start: '2017-05-12T12:00:00'
+  				// },
+  				// {
+  				// 	title: 'Meeting',
+  				// 	start: '2017-05-12T14:30:00'
+  				// },
+  				// {
+  				// 	title: 'Happy Hour',
+  				// 	start: '2017-05-12T17:30:00'
+  				// },
+  				// {
+  				// 	title: 'Dinner',
+  				// 	start: '2017-05-12T20:00:00'
+  				// },
+  				// {
+  				// 	title: 'Birthday Party',
+  				// 	start: '2017-05-13T07:00:00'
+  				// },
+  				// {
+  				// 	title: 'Click for Google',
+  				// 	url: 'http://google.com/',
+  				// 	start: '2017-05-28'
+  				// }
+  			]
+  		});
+
+  	});
+
+  </script>
+
+  <style>
+
+  	body {
+  		margin: 40px 10px;
+  		padding: 0;
+  		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+  		font-size: 14px;
+  	}
+
+  	#calendar {
+  		max-width: 900px;
+      max-height: 900px;
+      height: auto;
+  		margin: 0 auto;
+      font-size: 2px;
+  	}
+
+  </style>
+
 </head>
 
 <body class= "c2">
@@ -80,14 +182,15 @@
             </ul>
           </nav>
 
-          <!--
+
           <section class="box">
             <h2>カレンダー</h2>
-            <div id="cal1" style="padding:10px"></div>
-            <div id="cal2" style="padding:10px"></div>
-            <img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>
+            <!--<div id="cal1" style="padding:10px"></div>
+            <div id="cal2" style="padding:10px"></div>-->
+            <!--<img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>-->
+            <div id='calendar'></div>
             </section>
-          -->
+
 
             <aside>
               <h2>オンライン限定セール</h2>
@@ -122,7 +225,7 @@
 
       <!--スライドショースクリプト-->
       <script type="text/javascript" src="js/slide_simple_pack.js"></script>
-      <script src="{{{asset('assets/js/jquery.js')}}}"></script>
+      <!--<script src="{{{asset('assets/js/jquery.js')}}}"></script>-->
   	  <script src="{{{asset('assets/js/bootstrap.min.js')}}}"></script>
   	  <script src="{{{asset('assets/js/jquery.easing-1.3.min.js')}}}"></script>
       <script src="{{{asset('assets/js/jquery.scrollTo-1.4.3.1-min.js')}}}"></script>
