@@ -64,3 +64,19 @@ Route::get('cart_input', 'CartController@cart_input');
 Route::get('/reduce/{rowId}', 'CartController@reduce');
 Route::get('/increase/{rowId}', 'CartController@increase');
 Route::get('/delete_item/{rowId}', 'CartController@delete_item');
+
+
+Route::get('/send', function(){
+
+  // 現状はわたすデータがないのでエンプティーアレイをわたします
+  $data = [];
+  Mail::send('test', $data, function($message){
+    $message->to('cuongceopro@gmail.com')
+            ->subject('ここがタイトルです');
+  });
+
+});
+
+Route::get('/pay', 'PostsController@pay');
+Route::get('/order', 'PostsController@order');
+Route::get('/rental', 'PostsController@rental');

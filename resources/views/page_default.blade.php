@@ -25,8 +25,8 @@
   <!-- font awesome styles -->
   <link href="{{{asset('assets/font-awesome/css/font-awesome.css')}}}" rel="stylesheet">
   <!--fullcalendar-->
-  <link href="{{{asset('css/fullcalendar.min.css')}}}" rel='stylesheet' />
-  <link href="{{{asset('css/fullcalendar.print.min.css')}}}" rel='stylesheet' media='print' />
+  <link href="{{{asset('css/fullcalendar.css')}}}" rel='stylesheet' />
+  <link href="{{{asset('css/fullcalendar.print.css')}}}" rel='stylesheet' media='print' />
   <script src="{{{asset('js/moment.min.js')}}}"></script>
   <script src="{{{asset('js/jquery.min.js')}}}"></script>
   <script src="{{{asset('js/fullcalendar.min.js')}}}"></script>
@@ -177,8 +177,8 @@
               <li><a href="{!! URL::to('category/2') !!}">AKIKALE</a></li>
               <li><a href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
               <li><a href="{!! URL::to('category/4') !!}">その他</a></li>
-              <li><a href="{!! URL::to('category/5') !!}">オーダーメイド&リメーク</a></li>
-              <li><a href="{!! URL::to('category/6') !!}">レンタル</a></li>
+              <li><a href="{!! URL::to('order') !!}">オーダーメイド&リメーク</a></li>
+              <li><a href="{!! URL::to('rental') !!}">レンタル</a></li>
             </ul>
           </nav>
 
@@ -196,8 +196,8 @@
               <h2>オンライン限定セール</h2>
               <ul class="submenu">
                 <li><a href="#">ショッピングガイド</a></li>
-                <li><a href="#">お支払い方法</a></li>
-                <li><a href="#">制作工程</a></li>
+                <li><a href="{!! URL::to('pay') !!}">お支払い方法</a></li>
+                <!--<li><a href="#">制作工程</a></li>-->
               </ul>
             </aside>
 
