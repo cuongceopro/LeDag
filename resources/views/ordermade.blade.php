@@ -7,113 +7,132 @@
   <section class="box">
     <h2>オーダーメイド&リメーク</h2>
 
-    <!--
-    <ul>
-      <li>
-        <div id="test">
-          <div id="order_left">
-            <p style="text-align:center">
-              お好きなデザイン・生地で、お客様のサイズにぴったりあったお洋服を<br>お作りします。
-            </p>
-            <p style="text-align:center">
-              仮縫い1っ回つきで、お忙しい方でも無理なく、お洋服が出来ます。
-            </p>
-            <p style="text-align:center">
-              お客様のご希望に沿ったお洋服を、相談しながら、丁寧にお作り出来ます。
-            </p>
+    <br />
+    <img src="{{{asset('images/order/ordermade.png')}}}" height="300" alt="">
+    <br />
+    <br />
 
-            <p>
-              STEP 1
-            </p>
-            <img src="{{{asset('images/order/1.jpg')}}}" alt="">
+    <p style="text-align:center">
+      お好きなデザイン・生地で、お客様のサイズにぴったりあったお洋服をお作りします。
+    </p>
+    <p style="text-align:center">
+      仮縫い1っ回つきで、お忙しい方でも無理なく、お洋服が出来ます。
+    </p>
+    <p style="text-align:center">
+      お客様のご希望に沿ったお洋服を、相談しながら、丁寧にお作り出来ます。
+    </p>
 
-            <p>
-              STEP 1
-            </p>
-            <img src="{{{asset('images/order/2.jpg')}}}" alt="">
+    <h3>フルオーダーの流れ</h3>
 
-            <p>
-              STEP 1
-            </p>
-            <img src="{{{asset('images/order/3.jpg')}}}" alt="">
+    <p>
+      STEP 1: ご予約/デザイン
+      <img src="{{{asset('images/order/1.jpg')}}}" alt="">
+    </p>
 
-          </div>
-          <div id="order_right">
-            <br />
-            <table class="ta1">
-              <tr>
-                <th>種類</th>
-                <td>価格</td>
-              </tr>
-              <tr>
-                <th>トップス</th>
-                <td>7000円〜</td>
-              </tr>
-              <tr>
-                <th>スカート</th>
-                <td>7000円〜</td>
-              </tr>
-              <tr>
-                <th>パンツ</th>
-                <td>7000円〜</td>
-              </tr>
-              <tr>
-                <th>ワンピース</th>
-                <td>6000円〜</td>
-              </tr>
-              <tr>
-                <th>ジャケット</th>
-                <td>18000円〜</td>
-              </tr>
-              <tr>
-                <th>コート</th>
-                <td>18000円〜</td>
-              </tr>
-            </table>
-            <br />
-          </div>
+    <p>
+      STEP 2: 採寸
+      <img src="{{{asset('images/order/2.jpg')}}}" alt="">
+    </p>
 
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>
-            ☆マイパターンを承ります
-          </p>
-        </div>
-      </li>
-    </ul>
-    -->
+    <p>
+      STEP 3: パターン/仮縫い
+      <img src="{{{asset('images/order/3.png')}}}" alt="">
+    </p>
+
+    <p>
+      STEP 4: 縫製
+      <img src="{{{asset('images/order/4.jpg')}}}" alt="">
+    </p>
+
+    <p>
+      STEP 4: 発送<br>
+      納期約1.5か月～2か月間（混み具合に前後します）
+    </p>
+
+    </br>
+
+    <h3>料金一覧</h3>
+
+    <table class="ta1">
+      <tr>
+        <th>種類</th>
+        <td>価格</td>
+      </tr>
+      <tr>
+        <th>トップス</th>
+        <td>7000円〜</td>
+      </tr>
+      <tr>
+        <th>スカート</th>
+        <td>7000円〜</td>
+      </tr>
+      <tr>
+        <th>パンツ</th>
+        <td>7000円〜</td>
+      </tr>
+      <tr>
+        <th>ワンピース</th>
+        <td>6000円〜</td>
+      </tr>
+      <tr>
+        <th>ジャケット</th>
+        <td>18000円〜</td>
+      </tr>
+      <tr>
+        <th>コート</th>
+        <td>18000円〜</td>
+      </tr>
+    </table>
+    <br />
 
     <h3>マイパターンを承ります</h3>
     <p>
       お客様のお気に入りのお洋服と同じ形のお洋服をお作りします。
     </p>
-    <div class="span2">
-      <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+
+    <div class="well well-small">
+      <div class="row-fluid">
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+        </div>
+      </div>
     </div>
-    <div class="span2">
-      <img src="{{{asset('images/product/1.jpg')}}}" alt="">
-    </div>
-    <div class="span2">
-      <img src="{{{asset('images/product/1.jpg')}}}" alt="">
-    </div>
-    <div class="span2">
-      <img src="{{{asset('images/product/1.jpg')}}}" alt="">
-    </div>
-    <div class="span2">
-      <img src="{{{asset('images/product/1.jpg')}}}" alt="">
-    </div>
-    <div class="span2">
-      <img src="{{{asset('images/product/1.jpg')}}}" alt="">
-    </div>
-    <div class="span2">
-      <img src="{{{asset('images/product/1.jpg')}}}" alt="">
-    </div>
-    <div class="span2">
-      <img src="{{{asset('images/product/1.jpg')}}}" alt="">
-    </div>
-    
+
 
 
   </section>
