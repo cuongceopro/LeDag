@@ -43,6 +43,11 @@ class PostsController extends BaseController
       return View::make('rental');
     }
 
+    public function shoppingguide()
+    {
+      return View::make('shoppingguide');
+    }
+
     public function collection()
     {
       $category_posts = Post::where('cat_id', '1')->get();

@@ -80,3 +80,4 @@ Route::get('/send', function(){
 Route::get('/pay', 'PostsController@pay');
 Route::get('/order', 'PostsController@order');
 Route::get('/rental', 'PostsController@rental');
+Route::get('/shoppingguide', 'PostsController@shoppingguide');

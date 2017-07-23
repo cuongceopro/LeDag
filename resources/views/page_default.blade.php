@@ -197,7 +197,7 @@
             <aside>
               <h2>オンライン限定セール</h2>
               <ul class="submenu">
-                <li><a href="#">ショッピングガイド</a></li>
+                <li><a href="{!! URL::to('shoppingguide') !!}">ショッピングガイド</a></li>
                 <li><a href="{!! URL::to('pay') !!}">お支払い方法</a></li>
                 <!--<li><a href="#">制作工程</a></li>-->
               </ul>
