@@ -41,6 +41,7 @@
                   <button type="submit" class="defaultBtn"><span class=" icon-shopping-cart"></span> Add to cart</button>
                 <!--</form>-->
                   <button><a href="{!! URL::to('/good/'.$category_good->id.'') !!}" class="shopBtn">VIEW</a></button>
+                  <!--<a href="{!! URL::to('/good/'.$category_good->id.'') !!}" class="shopBtn">VIEW</a>-->
                 </div>
 
               </form>

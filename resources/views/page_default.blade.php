@@ -136,7 +136,7 @@
 
   <header>
     <div class="inner">
-      <p id="logo"><a href="{!! URL::to('ledaq') !!}"><img src="{{{asset('images/logo.png')}}}" width="220" height="30" alt=""></a></p>
+      <p id="logo"><a href="{!! URL::to('ledaq') !!}"><img src="{{{asset('images/home/logo_Fotor3.jpg')}}}" width="220" height="60" alt=""></a></p>
       <p id="cart"><a href="{!! URL::to('cart') !!}">カートをみる</a></p>
     </div>
   </header>

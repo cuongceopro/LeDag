@@ -75,8 +75,8 @@ header .inner h1 {
 /*ロゴ画像の設定*/
 header .inner #logo {
 	position: absolute;
-	left: 20px;	/*innerに対して左から20pxの場所に配置*/
-	top: 18px;	/*innerに対して上から18pxの場所に配置*/
+	/*left: 20px;	/*innerに対して左から20pxの場所に配置*/
+	/*top: 18px;	/*innerに対して上から18pxの場所に配置*/
 }
 /*ヘッダー内の「カートをみる」の設定*/
 header .inner #cart {
@@ -671,7 +671,8 @@ header .inner h1 {
 /*ロゴ画像の設定*/
 header .inner #logo {
 	position: static;
-	padding-top: 18px;
+	/*padding-top: 18px;*/
+	padding-top: 0px;
 }
 /*ヘッダー内の「カートをみる」の設定*/
 header .inner #cart {
@@ -781,11 +782,14 @@ header .inner h1 {
 /*ロゴ画像の設定*/
 header .inner #logo {
 	position: static;
-	padding: 18px 0px 0px 5px;
+	/*padding: 18px 0px 0px 5px;*/
+	padding: 0px 0px 0px 0px;
 }
 header .inner #logo img {
-	width: 70%;
-	height: auto;
+	/*width: 70%;*/
+	width: 100%;
+	/*height: auto;*/
+  height: auto;
 }
 /*ヘッダー内の「カートをみる」の設定*/
 header .inner #cart {
