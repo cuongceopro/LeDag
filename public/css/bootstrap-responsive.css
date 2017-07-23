@@ -606,6 +606,12 @@ table th[class*="span"],
   *width: 14.840425531914894%;
 }
 
+.row-fluid .span2_new {
+  width: 14.893617021276595%;
+  *width: 14.840425531914894%;
+  margin: 10 10 10 10;
+}
+
 .row-fluid .span1 {
   width: 6.382978723404255%;
   *width: 6.329787234042553%;
