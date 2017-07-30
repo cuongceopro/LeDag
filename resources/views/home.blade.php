@@ -44,10 +44,12 @@
       </dl>
     </section>
 
+    <!--
     <section class="box">
       <h2>Staff</h2>
       <p>ここに動画を入れます。</p>
     </section>
+  -->
 
     <div id='calendar_a' style="max-width:300px;margin: 0 auto;">
     </div>

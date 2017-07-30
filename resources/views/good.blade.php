@@ -22,17 +22,23 @@
   <div id="myCarousel" class="carousel slide cntr">
             <div class="carousel-inner">
               <div class="item active">
-               <a href="#"> <img src="{{{asset('images/product/1.jpg')}}}" alt="" style="width:100%"></a>
+               <a href="#"> <img src="/images/product/{{$good->image1 }}" alt="" style="width:100%"></a>
               </div>
+              @if ($good->image2 !== null)
               <div class="item">
-                 <a href="#"> <img src="{{{asset('images/product/2.jpg')}}}" alt="" style="width:100%"></a>
+                 <a href="#"> <img src="/images/product/{{$good->image2 }}" alt="" style="width:100%"></a>
               </div>
+              @endif
+              @if ($good->image3 !== null)
               <div class="item">
-                <a href="#"> <img src="{{{asset('images/product/3.jpg')}}}" alt="" style="width:100%"></a>
+                <a href="#"> <img src="/images/product/{{$good->image3 }}" alt="" style="width:100%"></a>
               </div>
+              @endif
+              @if ($good->image4 !== null)
               <div class="item">
-                <a href="#"> <img src="{{{asset('images/product/4.jpg')}}}" alt="" style="width:100%"></a>
+                <a href="#"> <img src="/images/product/{{$good->image4 }}" alt="" style="width:100%"></a>
               </div>
+              @endif
             </div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
@@ -54,7 +60,9 @@
         <div class="control-group">
         <label class="control-label"><span>カラー</span></label>
         <div class="controls">
-          <select class="span11">
+          <select name="color" class="span11">
+            <option>黒</option>
+            <option>グレー</option>
             <option>赤</option>
             <option>ピンク</option>
             <option>紫</option>
@@ -62,6 +70,7 @@
           </select>
         </div>
         </div>
+        <!--
         <div class="control-group">
         <label class="control-label"><span>材料</span></label>
         <div class="controls">
@@ -73,14 +82,16 @@
           </select>
         </div>
         </div>
+        -->
         <!--<h4>100 items in stock</h4>-->
         <br />
-        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+        <p>
+          {{ $good->summary }}
         <p>
           <input type="hidden" name="id" value="{{ $good->id }}">
           <input type="hidden" name="name" value="{{ $good->name }}">
           <input type="hidden" name="price" value="{{ $good->cost }}">
+          <input type="hidden" name="code" value="{{ $good->code }}">
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Add to cart</button>
       </form>
@@ -92,24 +103,16 @@
     <table class="table table-striped">
 <tbody>
 <!--<tr class="techSpecRow"><td class="techSpecTD1">Color:</td><td class="techSpecTD2">Black</td></tr>-->
-<tr class="techSpecRow"><td class="techSpecTD1">Style:</td><td class="techSpecTD2">Apparel,Sports</td></tr>
-<tr class="techSpecRow"><td class="techSpecTD1">Season:</td><td class="techSpecTD2">spring/summer</td></tr>
-<tr class="techSpecRow"><td class="techSpecTD1">Usage:</td><td class="techSpecTD2">fitness</td></tr>
-<tr class="techSpecRow"><td class="techSpecTD1">Sport:</td><td class="techSpecTD2">122855031</td></tr>
-<tr class="techSpecRow"><td class="techSpecTD1">Brand:</td><td class="techSpecTD2">Shock Absorber</td></tr>
+<tr class="techSpecRow"><td class="techSpecTD1">品番:</td><td class="techSpecTD2">{{ $good->code }}</td></tr>
+<tr class="techSpecRow"><td class="techSpecTD1">色:</td><td class="techSpecTD2">{{ $good->color }}</td></tr>
 </tbody>
 </table>
 
+@if ( $good->detail !== null)
 <p>
-この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+  {{ $good->detail }}
 </p>
+@endif
 
   </div>
 

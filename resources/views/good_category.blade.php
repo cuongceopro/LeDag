@@ -6,20 +6,17 @@
   <section>
 
     <h2>{{ $goodcategory_goods[0]->category->name}}</h2>
-    <p>販売商品のご案内。</p>
-
-
-
+    <!--<p>販売商品のご案内。</p>-->
       @foreach($goodcategory_goods as $category_good)
         <div class="well well-small">
           <div class="row-fluid">
             <div class="span2">
-              <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+              <img src="/images/product/{{$category_good->image1 }}" alt="">
             </div>
             <div class="span6">
               <h5>{{ $category_good->name }} </h5>
               <p>
-                {{ $category_good->detail }}
+                {{ $category_good->summary }}
               </p>
             </div>
             <div class="span4 alignR">
@@ -37,12 +34,14 @@
                   <input type="hidden" name="name" value="{{ $category_good->name }}">
                   <input type="hidden" name="price" value="{{ $category_good->cost }}">
                   <input type="hidden" name="quantity" value="1">
+                  <input type="hidden" name="color" value="黒">
+                  <input type="hidden" name="code" value="{{ $category_good->code }}">
                   <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                   <button type="submit" class="defaultBtn"><span class=" icon-shopping-cart"></span> Add to cart</button>
                 <!--</form>-->
-                  <button><a href="{!! URL::to('/good/'.$category_good->id.'') !!}" class="shopBtn">VIEW</a></button>
-                  <!--<a href="{!! URL::to('/good/'.$category_good->id.'') !!}" class="shopBtn">VIEW</a>-->
+                  <!--<button><a href="{!! URL::to('/good/'.$category_good->id.'') !!}" class="shopBtn">VIEW</a></button>-->
                 </div>
+                <a href="{!! URL::to('/good/'.$category_good->id.'') !!}" class="shopBtn">VIEW</a>
 
               </form>
             </div>

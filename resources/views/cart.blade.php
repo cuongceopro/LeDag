@@ -31,8 +31,8 @@
         <tr>
           <th>商品</th>
           <th>商品名</th>
+          <th>品番</th>
           <th>色</th>
-          <th>素材</th>
           <th>単価</th>
           <th>数量</th>
           <th>合計</th>
@@ -42,27 +42,28 @@
 
         <?php
 
-        //$item = Cart::search(function ($cartItem, $rowId){
-        //return $cartItem->id === '11';
-        //});
-
-        //print $item;
+        // $item = Cart::search(function ($cartItem, $rowId){
+        // return $cartItem->id === '69';
+        // });
+        //
+        // print $item;
 
         //foreach($cart as $key => $val)
         foreach (Cart::content() as $item)
         {
           //echo $item;
-          //print $item->rowId;
+          //  print $item->options->color;
+          //print $item;
           //print $test;
           //print '<br />';
           //print 'Quantity:';
-          //print $item->qty;
+          // print $item->qty;
           print '<tr>';
           print '<td><img width="100" src="/images/product/1.jpg" alt=""></td>';
           print '<td>'.$item->name.'</td>';
-          print '<td> - </td>';
+          print '<td>'.$item->options->code.'</td>';
           //print '<td><span class="shopBtn"><span class="icon-ok"></span></span> </td>';
-          print '<td> - </td>';
+          print '<td> '.$item->options->color.'</td>';
           print '<td>¥'.$item->price.'</td>';
           print '<td>';
           print '<input class="span1" style="max-width:34px" placeholder="'.$item->qty.'" id="appendedInputButtons" size="16" type="text" value="'.$item->qty.'">';

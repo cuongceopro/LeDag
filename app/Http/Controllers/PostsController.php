@@ -59,7 +59,8 @@ class PostsController extends BaseController
 
     public function eventnews()
     {
-      $category_posts = Post::where('cat_id', '2')->get();
+      //$category_posts = Post::where('cat_id', '2')->get();
+      $category_posts = Post::all();
 
       return View::make('eventnews')
         ->with('category_posts', $category_posts);
