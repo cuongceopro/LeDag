@@ -45,7 +45,7 @@ class CartController extends Controller
           $quantity = 1;
         }
 
-        Cart::add(['id' => $request->id, 'name' => $request->name, 'qty' => $quantity, 'price' => $request->price, 'options' => ['color' => $request->color, 'code' => $request->code]])->associate('App\Good');
+        Cart::add(['id' => $request->id, 'name' => $request->name, 'qty' => $quantity, 'price' => $request->price, 'options' => ['color' => $request->color, 'code' => $request->code, 'image' => $request->image]])->associate('App\Good');
         return redirect('cart')->withSuccessMessage('Item was added to your cart!')->with('quantity',$quantity);
     }
 

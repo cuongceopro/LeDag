@@ -59,7 +59,7 @@
           //print 'Quantity:';
           // print $item->qty;
           print '<tr>';
-          print '<td><img width="100" src="/images/product/1.jpg" alt=""></td>';
+          print '<td><img width="100" src="/images/product/'.$item->options->image.'" alt=""></td>';
           print '<td>'.$item->name.'</td>';
           print '<td>'.$item->options->code.'</td>';
           //print '<td><span class="shopBtn"><span class="icon-ok"></span></span> </td>';

@@ -63,6 +63,8 @@
           <select name="color" class="span11">
             <option>黒</option>
             <option>グレー</option>
+            <option>薄ブルー</option>
+            <option>チェック</option>
             <option>赤</option>
             <option>ピンク</option>
             <option>紫</option>
@@ -92,6 +94,7 @@
           <input type="hidden" name="name" value="{{ $good->name }}">
           <input type="hidden" name="price" value="{{ $good->cost }}">
           <input type="hidden" name="code" value="{{ $good->code }}">
+          <input type="hidden" name="image" value="{{ $good->image1 }}">
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Add to cart</button>
       </form>
