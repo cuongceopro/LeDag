@@ -15,9 +15,14 @@
             </div>
             <div class="span6">
               <h5>{{ $category_good->name }} </h5>
+              <?php
+              echo $category_good->summary;
+               ?>
+               <!--
               <p>
                 {{ $category_good->summary }}
               </p>
+            -->
             </div>
             <div class="span4 alignR">
               <form class="form-horizontal qtyFrm" action="{!! URL::to('/cart') !!}" method="post">

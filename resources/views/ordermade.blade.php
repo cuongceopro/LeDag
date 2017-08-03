@@ -93,47 +93,67 @@
     <div class="well well-small">
       <div class="row-fluid">
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_1.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_2.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_3.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_4.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_5.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_6_kari.jpg')}}}" alt="">
         </div>
       </div>
+      <br />
       <div class="row-fluid">
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_7.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_8.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_9.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_10.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_11_kari.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/product/1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_12_kari.jpg')}}}" alt="">
+        </div>
+      </div>
+      <br />
+      <div class="row-fluid">
+        <div class="span2">
+          <img src="{{{asset('images/order/product_13.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_14.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_15.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_16.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_17.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_18.jpg')}}}" alt="">
         </div>
       </div>
     </div>
-
-
 
   </section>
 

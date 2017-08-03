@@ -87,9 +87,17 @@
         -->
         <!--<h4>100 items in stock</h4>-->
         <br />
+        <?php
+        echo '<p>';
+        echo $good->summary;
+        echo '</p>';
+         ?>
+        <br />
+        <!--
         <p>
           {{ $good->summary }}
         <p>
+        -->
           <input type="hidden" name="id" value="{{ $good->id }}">
           <input type="hidden" name="name" value="{{ $good->name }}">
           <input type="hidden" name="price" value="{{ $good->cost }}">
