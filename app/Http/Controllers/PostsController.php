@@ -20,7 +20,7 @@ class PostsController extends BaseController
     public function ledaq()
     {
       $posts = Post::all();
-      return View::make('home')->with('posts', $posts);
+      return View::make('ledaq')->with('posts', $posts);
     }
 
     public function company()

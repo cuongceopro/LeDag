@@ -76,9 +76,9 @@
         <div id="sub">
 
           <nav class="box1">
-            <h2>カテゴリ一覧</h2>
+            <h2>管理用一覧</h2>
             <ul>
-              <li><a href="{!! URL::to('category/1') !!}">手刺繍ギフト</a></li>
+              <li><a href="{!! URL::to('manage/inquiry/1') !!}">問い合わせ</a></li>
               <li><a href="{!! URL::to('category/2') !!}">AKIKALE</a></li>
               <li><a href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
               <li><a href="{!! URL::to('category/4') !!}">その他</a></li>
@@ -86,24 +86,6 @@
               <li><a href="{!! URL::to('rental') !!}">レンタル</a></li>
             </ul>
           </nav>
-
-
-          <section class="box">
-            <h2>カレンダー</h2>
-            <!--<div id="cal1" style="padding:10px"></div>
-            <div id="cal2" style="padding:10px"></div>-->
-            <!--<img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>-->
-            <div id='calendar'></div>
-            </section>
-
-
-            <aside>
-              <h2>オンライン限定セール</h2>
-              <ul class="submenu">
-                <li><a href="{!! URL::to('shoppingguide') !!}">ショッピングガイド</a></li>
-                <li><a href="{!! URL::to('pay') !!}">お支払い方法</a></li>
-                <!--<li><a href="#">制作工程</a></li>-->
-              </ul>
             </aside>
 
           </div>

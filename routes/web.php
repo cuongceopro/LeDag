@@ -85,3 +85,11 @@ Route::get('/pay', 'PostsController@pay');
 Route::get('/order', 'PostsController@order');
 Route::get('/rental', 'PostsController@rental');
 Route::get('/shoppingguide', 'PostsController@shoppingguide');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/manage/inquiry/{status?}', 'HomeController@inquiry');
+Route::get('/manage/inquiry_detail/{id?}', 'HomeController@inquiry_detail');
+Route::get('/manage/inquiry_done/{id?}', 'HomeController@inquiry_done');
+Route::get('/manage/inquiry_todo/{id?}', 'HomeController@inquiry_todo');
