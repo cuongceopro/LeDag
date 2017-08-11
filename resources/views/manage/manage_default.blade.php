@@ -78,8 +78,8 @@
           <nav class="box1">
             <h2>管理用一覧</h2>
             <ul>
-              <li><a href="{!! URL::to('manage/inquiry/1') !!}">問い合わせ</a></li>
-              <li><a href="{!! URL::to('category/2') !!}">AKIKALE</a></li>
+              <li><a href="{!! URL::to('manage/inquiry/1') !!}">問い合わせ管理</a></li>
+              <li><a href="{!! URL::to('manage/order/1') !!}">注文管理</a></li>
               <li><a href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
               <li><a href="{!! URL::to('category/4') !!}">その他</a></li>
               <li><a href="{!! URL::to('order') !!}">オーダーメイド&リメーク</a></li>

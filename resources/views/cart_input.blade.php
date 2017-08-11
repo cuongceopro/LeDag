@@ -204,8 +204,8 @@
           <td>
             <select name="pay">
               <option value="" selected="selected">お支払い方法</option>
-              <option value="北海道">口座振り込み</option>
-              <option value="北海道">代引き</option>
+              <option value="口座振り込み">口座振り込み</option>
+              <option value="代引き">代引き</option>
             </select></td>
           </tr>
         <tr>

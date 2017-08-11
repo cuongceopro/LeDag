@@ -45,6 +45,7 @@ class InquirysController extends BaseController
 
       if ($validator->passes()) {
         $inquiry = new Inquiry;
+        $inquiry->status = 1;
         $inquiry->name_roma = Request::input('name_roma');
         $inquiry->name_kana = Request::input('name_kana');
         $inquiry->address_1 = Request::input('address_1');
@@ -102,6 +103,7 @@ class InquirysController extends BaseController
           $cart = new CartModel;
           $cart->order_id = $order_id;
           $cart->good_code = $item->options->code;
+          $cart->cost = $item->price;
           $cart->number = $item->qty;
           $cart->subtotal = $item->subtotal;
           $cart->save();
@@ -109,6 +111,7 @@ class InquirysController extends BaseController
 
         $order = new Order;
         $order->id = $order_id;
+        $order->status = 1;
         $order->name_kanji = Request::input('name_kanji');
         $order->name_kana = Request::input('name_kana');
         $order->email = Request::input('email');

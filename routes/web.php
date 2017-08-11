@@ -93,3 +93,8 @@ Route::get('/manage/inquiry/{status?}', 'HomeController@inquiry');
 Route::get('/manage/inquiry_detail/{id?}', 'HomeController@inquiry_detail');
 Route::get('/manage/inquiry_done/{id?}', 'HomeController@inquiry_done');
 Route::get('/manage/inquiry_todo/{id?}', 'HomeController@inquiry_todo');
+
+Route::get('/manage/order/{status?}', 'HomeController@order');
+Route::get('/manage/order_detail/{id?}', 'HomeController@order_detail');
+Route::get('/manage/order_done/{id?}', 'HomeController@order_done');
+Route::get('/manage/order_todo/{id?}', 'HomeController@order_todo');

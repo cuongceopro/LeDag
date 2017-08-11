@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
 use App\Inquiry;
+use App\Order;
+use App\CartModel;
 
 class HomeController extends Controller
 {
@@ -35,8 +37,6 @@ class HomeController extends Controller
 
       return View::make('manage.manage_inquiry')
       ->with('inquiries', $inquiries);
-
-        return view('manage.manage_inquiry');
     }
 
     public function inquiry_detail($id)
@@ -63,6 +63,43 @@ class HomeController extends Controller
       $inquiry->save();
 
       return redirect("/manage/inquiry/1");
+    }
+
+    public function order($status){
+
+      $orders = Order::where('status', $status)->get();
+
+      return View::make('manage.manage_order')
+      ->with('orders', $orders);
+    }
+
+    public function order_detail($id)
+    {
+      $order = Order::find($id);
+
+      $carts = CartModel::where('order_id', $order->id)->get();
+
+      return View::make('manage.manage_order_detail')->with('order', $order)->with('carts', $carts);
+    }
+
+    public function order_done($id)
+    {
+
+      $order = Order::find($id);
+      $order->status = 2;
+      $order->save();
+
+      return redirect("/manage/order/1");
+    }
+
+    public function order_todo($id)
+    {
+
+      $order = Order::find($id);
+      $order->status = 1;
+      $order->save();
+
+      return redirect("/manage/order/1");
     }
 
 }
