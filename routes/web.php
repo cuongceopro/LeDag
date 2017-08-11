@@ -35,7 +35,8 @@ Route::get('/good/{id?}', 'GoodsController@good');
 
 Route::get('/create', 'PostsController@create');
 
-Route::post('/store', 'PostsController@store');
+Route::post('/event_store', 'PostsController@store');
+
 Route::post('/inquiry_store', 'InquirysController@store');
 Route::get('/contact_done', 'InquirysController@contact_done');
 
@@ -98,3 +99,6 @@ Route::get('/manage/order/{status?}', 'HomeController@order');
 Route::get('/manage/order_detail/{id?}', 'HomeController@order_detail');
 Route::get('/manage/order_done/{id?}', 'HomeController@order_done');
 Route::get('/manage/order_todo/{id?}', 'HomeController@order_todo');
+
+Route::get('/manage/creat_event', 'HomeController@create_event');
+Route::post('/manage/event_store', 'PostsController@event_store');

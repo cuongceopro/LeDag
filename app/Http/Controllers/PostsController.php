@@ -86,18 +86,18 @@ class PostsController extends BaseController
       return View::make('single')->with('post', $post);
     }
 
-    public function store(Request $request)
+    public function event_store(Request $request)
     {
       $rules = [
         'title' => 'required',
-        'content'=>'required',
-        'cat_id' => 'required'
+        'content_summary'=>'required',
+        'content' => 'required'
       ];
 
       $messages = array(
         'title.required' => 'タイトルを正しく入力してください。',
+        'content_summary.required' => '概要を正しく入力してください。',
         'content.required' => '本文を正しく入力してください。',
-        'cat_id.required' => 'カテゴリーを選択してください。',
       );
 
       $validator = Validator::make(Request::all(), $rules, $messages);
@@ -105,23 +105,18 @@ class PostsController extends BaseController
       if ($validator->passes()) {
         $post = new Post;
         $post->title = Request::input('title');
+        $post->content_summary = Request::input('content_summary');
         $post->content = Request::input('content');
-        $post->cat_id = Request::input('cat_id');
+        $post->cat_id = 1;
         $post->comment_count = 0;
         $post->save();
-        return Redirect::back()
+        return redirect("/eventnews")
         ->with('message', '投稿が完了しました。');
       }else{
         return Redirect::back()
         ->withErrors($validator)
         ->withInput();
       }
-    }
-
-    public function create()
-    {
-      $post = Post::all();
-      return View::make('create')->with('post', $post);
     }
 
     /*

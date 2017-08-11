@@ -102,4 +102,42 @@ class HomeController extends Controller
       return redirect("/manage/order/1");
     }
 
+    public function create_event()
+    {
+      return View::make('manage.create_event');
+    }
+
+    public function event_store(Request $request)
+    {
+      $rules = [
+        'title' => 'required',
+        'content_summary'=>'required',
+        'content' => 'required'
+      ];
+
+      $messages = array(
+        'title.required' => 'タイトルを正しく入力してください。',
+        'content_summary.required' => '概要を正しく入力してください。',
+        'content.required' => '本文を正しく入力してください。',
+      );
+
+      $validator = Validator::make(Request::all(), $rules, $messages);
+
+      if ($validator->passes()) {
+        $post = new Post;
+        $post->title = Request::input('title');
+        $post->content_summary = Request::input('content_summay');
+        $post->content = Request::input('content');
+        $post->cat_id = 1;
+        $post->comment_count = 0;
+        $post->save();
+        return Redirect::back()
+        ->with('message', '投稿が完了しました。');
+      }else{
+        return Redirect::back()
+        ->withErrors($validator)
+        ->withInput();
+      }
+    }
+
 }
