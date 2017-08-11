@@ -61,14 +61,7 @@
         <label class="control-label"><span>カラー</span></label>
         <div class="controls">
           <select name="color" class="span11">
-            <option>黒</option>
-            <option>グレー</option>
-            <option>薄ブルー</option>
-            <option>チェック</option>
-            <option>赤</option>
-            <option>ピンク</option>
-            <option>紫</option>
-            <option>青</option>
+            <option selected="selected">{{ $good->color }}</option>
           </select>
         </div>
         </div>

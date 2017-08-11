@@ -39,7 +39,7 @@
                   <input type="hidden" name="name" value="{{ $category_good->name }}">
                   <input type="hidden" name="price" value="{{ $category_good->cost }}">
                   <input type="hidden" name="quantity" value="1">
-                  <input type="hidden" name="color" value="黒">
+                  <input type="hidden" name="color" value="{{ $category_good->color }}">
                   <input type="hidden" name="code" value="{{ $category_good->code }}">
                   <input type="hidden" name="image" value="{{ $category_good->image1 }}">
                   <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">

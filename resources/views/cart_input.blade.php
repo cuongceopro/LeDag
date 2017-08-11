@@ -8,7 +8,7 @@
   <?php
   //session_start();
   //if(isset($_SESSION['cart']) == true){
-    //$cart = $_SESSION['cart'];
+  //$cart = $_SESSION['cart'];
   //}
   //$cart[] = $good->id;
   //$_SESSION['cart'] = $cart;
@@ -31,8 +31,8 @@
         <tr>
           <th>商品</th>
           <th>商品名</th>
+          <th>品番</th>
           <th>色</th>
-          <th>素材</th>
           <th>単価</th>
           <th>数量</th>
           <th>合計</th>
@@ -42,27 +42,28 @@
 
         <?php
 
-        //$item = Cart::search(function ($cartItem, $rowId){
-        //return $cartItem->id === '11';
-        //});
-
-        //print $item;
+        // $item = Cart::search(function ($cartItem, $rowId){
+        // return $cartItem->id === '69';
+        // });
+        //
+        // print $item;
 
         //foreach($cart as $key => $val)
         foreach (Cart::content() as $item)
         {
           //echo $item;
-          //print $item->rowId;
+          //  print $item->options->color;
+          //print $item;
           //print $test;
           //print '<br />';
           //print 'Quantity:';
-          //print $item->qty;
+          // print $item->qty;
           print '<tr>';
-          print '<td><img width="100" src="/images/product/1.jpg" alt=""></td>';
+          print '<td><img width="100" src="/images/product/'.$item->options->image.'" alt=""></td>';
           print '<td>'.$item->name.'</td>';
-          print '<td> - </td>';
+          print '<td>'.$item->options->code.'</td>';
           //print '<td><span class="shopBtn"><span class="icon-ok"></span></span> </td>';
-          print '<td> - </td>';
+          print '<td> '.$item->options->color.'</td>';
           print '<td>¥'.$item->price.'</td>';
           print '<td>';
           print '<input class="span1" style="max-width:34px" placeholder="'.$item->qty.'" id="appendedInputButtons" size="16" type="text" value="'.$item->qty.'">';
@@ -108,32 +109,38 @@
     </form>
     </div>
     -->
-
-
-<a href="{{{asset('/cart_input')}}}" class="shopBtn" >Next <span class="icon-arrow-right"></span></a>
-<br />
-<!--<a style="float:right" href="{{{asset('/cart_input')}}}" class="shopBtn" >Next</a>-->
+  <br>
 
   <section>
-    <form action="{!! URL::to('/ledaq') !!}" method="post">
+    <form action="{!! URL::to('/store_database') !!}" method="post">
 
     <h3>お客様情報</h3>
+
+    {{-- エラーメッセージの表示 --}}
+    @foreach($errors->all() as $message)
+      <font color="red">{{ $message }} </font><br>
+    @endforeach
+
     <table class="ta1 mb15">
       <tr>
         <th colspan="2" class="tamidashi">※マークは入力必須です</th>
       </tr>
       <tr>
-        <th>お名前※</th>
-        <td><input type="text" name="お名前" size="30" class="ws"></td>
+        <th>お名前(漢字)※</th>
+        <td><input type="text" name="name_kanji" size="30" class="ws"></td>
+      </tr>
+      <tr>
+        <th>お名前(かな)</th>
+        <td><input type="text" name="name_kana" size="30" class="ws"></td>
       </tr>
       <tr>
         <th>メールアドレス※</th>
-        <td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+        <td><input type="text" name="email" size="30" class="ws"></td>
       </tr>
       <tr>
         <th>ご住所(都道府県)※</th>
         <td>
-          <select name="ご住所(都道府県)">
+          <select name="address_1">
             <option value="" selected="selected">都道府県選択</option>
             <option value="北海道">北海道</option>
             <option value="青森県">青森県</option>
@@ -186,16 +193,16 @@
         </tr>
         <tr>
           <th>ご住所(市区町村以下)※</th>
-          <td><input type="text" name="ご住所(市区町村以下)" size="30" class="wl"></td>
+          <td><input type="text" name="address_2" size="30" class="wl"></td>
         </tr>
         <tr>
           <th>電話番号※</th>
-          <td><input type="text" name="ご住所(市区町村以下)" size="30" class="wl"></td>
+          <td><input type="text" name="tel" size="30" class="wl"></td>
         </tr>
         <tr>
           <th>お支払い方法※</th>
           <td>
-            <select name="お支払い方法">
+            <select name="pay">
               <option value="" selected="selected">お支払い方法</option>
               <option value="北海道">口座振り込み</option>
               <option value="北海道">代引き</option>
@@ -203,13 +210,14 @@
           </tr>
         <tr>
           <th>その他（任意）</th>
-          <td><textarea name="お問い合わせ詳細" cols="30" rows="10" class="wl"></textarea></td>
+          <td><textarea name="other" cols="30" rows="10" class="wl"></textarea></td>
         </tr>
       </table>
 
       <p class="c">
-        <input type="submit" value="内容を確認する">
+        <input type="submit" value="送信する">
       </p>
+      <input type="hidden" name="total" value="{{ Cart::total() }}">
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
     </form>
