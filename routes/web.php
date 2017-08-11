@@ -36,6 +36,8 @@ Route::get('/good/{id?}', 'GoodsController@good');
 Route::get('/create', 'PostsController@create');
 
 Route::post('/store', 'PostsController@store');
+Route::post('/inquiry_store', 'InquirysController@store');
+Route::get('/contact_done', 'InquirysController@contact_done');
 
 Route::get('/category/{id?}', 'GoodsController@showCategory');
 

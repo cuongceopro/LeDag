@@ -5,27 +5,35 @@
 
   <section class="box">
 
+    {{ Form::open(['url' => 'inquiry_store'], array('class' => 'form')) }}
+
     <h2>お問い合わせ</h2>
     <p>
       お問い合わせは、お電話(03-5849-4079)にてお問い合わせいただくか、下記の入力画面に必要事項を
       ご記入いただき、入力画面の最後にある「送信する」ボタンよりお問い合わせください。
     </p>
+
+    {{-- エラーメッセージの表示 --}}
+    @foreach($errors->all() as $message)
+      <font color="red">{{ $message }} </font><br>
+    @endforeach
+
     <table class="ta1 mb15">
       <tr>
         <th colspan="2" class="tamidashi">※マークは入力必須です</th>
       </tr>
       <tr>
         <th>お名前※</th>
-        <td><input type="text" name="お名前" size="30" class="ws"></td>
+        <td><input type="text" name="name_roma" size="30" class="ws"></td>
       </tr>
       <tr>
         <th>フリガナ</th>
-        <td><input type="text" name="フリガナ" size="30" class="ws"></td>
+        <td><input type="text" name="name_kana" size="30" class="ws"></td>
       </tr>
       <tr>
         <th>ご住所(都道府県)</th>
         <td>
-          <select name="ご住所(都道府県)">
+          <select name="address_1">
             <option value="" selected="selected">都道府県選択</option>
             <option value="北海道">北海道</option>
             <option value="青森県">青森県</option>
@@ -78,52 +86,56 @@
         </tr>
         <tr>
           <th>ご住所(市区町村以下)</th>
-          <td><input type="text" name="ご住所(市区町村以下)" size="30" class="wl"></td>
+          <td><input type="text" name="address_2" size="30" class="wl"></td>
         </tr>
         <tr>
           <th>電話番号(携帯電話)※</th>
-          <td><input type="text" name="電話番号" size="30" class="ws"></td>
+          <td><input type="text" name="tel" size="30" class="ws"></td>
         </tr>
         <tr>
           <th>メールアドレス※</th>
-          <td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+          <td><input type="text" name="email" size="30" class="ws"></td>
         </tr>
         <tr>
-          <th>ご用件※</th>
+          <th>ご用件</th>
           <td>
-            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目１">オーダーのご予約</label><br>
-            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目２">フィッチング(お直し)のご予約</label><br>
-            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目３">お問い合わせ</label>
+            <select name="requirement">
+              <option value="お問い合わせ">お問い合わせ</option>
+              <option value="オーダーのご予約">オーダーのご予約</option>
+              <option value="フィッチング(お直し)のご予約">フィッチング(お直し)のご予約</option>
+            </select>
           </td>
         </tr>
         <tr>
           <th>オーダー/フィッテング第一希望</th>
-          <td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+          <td><input type="text" name="daiichikibou" size="30" class="ws"></td>
         </tr>
         <tr>
           <th>オーダー/フィッテング参加希望人数(合計)</th>
           <td>
-            <select name="ご住所(都道府県)">
+            <select name="numbers_people">
               <option value="" selected="selected">人数</option>
-              <option value="北海道">1</option>
-              <option value="青森県">2</option>
-              <option value="岩手県">3</option>
-              <option value="宮城県">4</option>
-              <option value="北海道">5</option>
-              <option value="青森県">6~10</option>
-              <option value="岩手県">10以上</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6~10">6~10</option>
+              <option value="10以上">10以上</option>
             </select></td>
           </tr>
           <tr>
             <th>今までLeDaqにお越しいただいたことがありますか。</th>
             <td>
-              <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目１">ある</label><br>
-              <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目２">なし</label><br>
+              <select name="have_gone">
+                <option selected="selected" value="なし">なし</option>
+                <option value="ある">ある</option>
+              </select>
             </td>
           </tr>
           <tr>
-            <th>お問い合わせ詳細※</th>
-            <td><textarea name="お問い合わせ詳細" cols="30" rows="10" class="wl"></textarea></td>
+            <th>お問い合わせ詳細</th>
+            <td><textarea name="detail" cols="30" rows="10" class="wl"></textarea></td>
           </tr>
         </table>
         <p>
@@ -132,9 +144,10 @@
           お問い合わせ、ありがとうございます。
         </p>
         <p class="c">
-          <input type="submit" value="内容を確認する">
+          <input type="submit" value="送信する">
         </p>
-        <br />
+
+        {{ Form::close() }}
 
         <h3>プライバシーポリシー</h3>
         <p>
