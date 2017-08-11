@@ -80,10 +80,6 @@
             <ul>
               <li><a href="{!! URL::to('manage/inquiry/1') !!}">問い合わせ管理</a></li>
               <li><a href="{!! URL::to('manage/order/1') !!}">注文管理</a></li>
-              <li><a href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
-              <li><a href="{!! URL::to('category/4') !!}">その他</a></li>
-              <li><a href="{!! URL::to('order') !!}">オーダーメイド&リメーク</a></li>
-              <li><a href="{!! URL::to('rental') !!}">レンタル</a></li>
             </ul>
           </nav>
             </aside>
