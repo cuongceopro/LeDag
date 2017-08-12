@@ -93,64 +93,64 @@
     <div class="well well-small">
       <div class="row-fluid">
         <div class="span2">
-          <img src="{{{asset('images/order/product_1.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_1_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_2.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_2_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_3.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_3_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_4.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_4_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_5.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_5_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_6_kari.jpg')}}}" alt="">
-        </div>
-      </div>
-      <br />
-      <div class="row-fluid">
-        <div class="span2">
-          <img src="{{{asset('images/order/product_7.jpg')}}}" alt="">
-        </div>
-        <div class="span2">
-          <img src="{{{asset('images/order/product_8.jpg')}}}" alt="">
-        </div>
-        <div class="span2">
-          <img src="{{{asset('images/order/product_9.jpg')}}}" alt="">
-        </div>
-        <div class="span2">
-          <img src="{{{asset('images/order/product_10.jpg')}}}" alt="">
-        </div>
-        <div class="span2">
-          <img src="{{{asset('images/order/product_11_kari.jpg')}}}" alt="">
-        </div>
-        <div class="span2">
-          <img src="{{{asset('images/order/product_12_kari.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_6_small.jpg')}}}" alt="">
         </div>
       </div>
       <br />
       <div class="row-fluid">
         <div class="span2">
-          <img src="{{{asset('images/order/product_13.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_7_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_14.JPG')}}}" alt="">
+          <img src="{{{asset('images/order/product_8_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_15.JPG')}}}" alt="">
+          <img src="{{{asset('images/order/product_9_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_16.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_10_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_17.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_11_small.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_18.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_12_small.jpg')}}}" alt="">
+        </div>
+      </div>
+      <br />
+      <div class="row-fluid">
+        <div class="span2">
+          <img src="{{{asset('images/order/product_13_small.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_14_small.JPG')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_15_small.JPG')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_16_small.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_17_small.jpg')}}}" alt="">
+        </div>
+        <div class="span2">
+          <img src="{{{asset('images/order/product_18_small.jpg')}}}" alt="">
         </div>
       </div>
     </div>

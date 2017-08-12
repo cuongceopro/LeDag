@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\View;
 use App\Inquiry;
 use App\Order;
 use App\CartModel;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -19,6 +20,12 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function ledaq()
+    {
+      $posts = Post::all();
+      return View::make('ledaq')->with('posts', $posts);
     }
 
     /**

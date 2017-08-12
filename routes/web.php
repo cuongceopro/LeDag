@@ -15,7 +15,8 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'PostsController@ledaq');
+//Route::get('/', 'PostsController@ledaq');
+Route::get('/', 'HomeController@ledaq');
 
 Route::get('/company', 'PostsController@company');
 

@@ -18,34 +18,34 @@
     <div class="well well-small">
       <div class="row-fluid">
         <div class="span2">
-          <a href="good/73"><img src="{{{asset('images/product/rent/AKL-AD001_1.jpg')}}}" alt=""></a>
+          <a href="good/73"><img src="{{{asset('images/product/rent/AKL-AD001_1_summary.jpg')}}}" alt=""></a>
         </div>
         <div class="span2">
-          <a href="good/111"><img src="{{{asset('images/product/rent/AKL-AD002_1.jpg')}}}" alt=""></a>
+          <a href="good/111"><img src="{{{asset('images/product/rent/AKL-AD002_1_summary.jpg')}}}" alt=""></a>
         </div>
         <div class="span2">
-          <a href="good/112"><img src="{{{asset('images/product/rent/AKL-AD003_1.jpg')}}}" alt=""></a>
+          <a href="good/112"><img src="{{{asset('images/product/rent/AKL-AD003_1_summary.jpg')}}}" alt=""></a>
         </div>
         <div class="span2">
-          <a href="good/113"><img src="{{{asset('images/product/rent/LD-R-001_1.JPG')}}}" alt=""></a>
+          <a href="good/113"><img src="{{{asset('images/product/rent/LD-R-001_1_summary.JPG')}}}" alt=""></a>
         </div>
         <div class="span2">
-          <a href="good/115"><img src="{{{asset('images/product/rent/LD-R-002_1.JPG')}}}" alt=""></a>
+          <a href="good/115"><img src="{{{asset('images/product/rent/LD-R-002_1_summary.JPG')}}}" alt=""></a>
         </div>
         <div class="span2">
-          <a href="good/117"><img src="{{{asset('images/product/rent/LD-R-003_1.JPG')}}}" alt=""></a>
+          <a href="good/117"><img src="{{{asset('images/product/rent/LD-R-003_1_summary.JPG')}}}" alt=""></a>
         </div>
       </div>
       <br/>
       <div class="row-fluid">
         <div class="span2">
-          <a href="good/118"><img src="{{{asset('images/product/rent/LD-R-005_1.jpg')}}}" alt=""></a>
+          <a href="good/118"><img src="{{{asset('images/product/rent/LD-R-005_1_summary.jpg')}}}" alt=""></a>
         </div>
         <div class="span2">
-          <a href="good/119"><img src="{{{asset('images/product/rent/LD-R-006_1.jpg')}}}" alt=""></a>
+          <a href="good/119"><img src="{{{asset('images/product/rent/LD-R-006_1_summary.jpg')}}}" alt=""></a>
         </div>
         <div class="span2">
-          <a href="good/120"><img src="{{{asset('images/product/rent/LD-R-007_1.jpg')}}}" alt=""></a>
+          <a href="good/120"><img src="{{{asset('images/product/rent/LD-R-007_1_summary.jpg')}}}" alt=""></a>
         </div>
         <div class="span2">
           <!--<img src="{{{asset('images/product/rent/10.png')}}}" alt="">-->
