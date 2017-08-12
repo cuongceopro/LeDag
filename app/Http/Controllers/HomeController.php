@@ -28,8 +28,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return redirect('/manage/inquiry/1');
     }
+
+    public function manage()
+    {
+        return redirect('/manage/inquiry/1');
+    }   
 
     public function inquiry($status){
 

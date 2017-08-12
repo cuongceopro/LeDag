@@ -138,10 +138,10 @@
           <img src="{{{asset('images/order/product_13.jpg')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_14.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_14.JPG')}}}" alt="">
         </div>
         <div class="span2">
-          <img src="{{{asset('images/order/product_15.jpg')}}}" alt="">
+          <img src="{{{asset('images/order/product_15.JPG')}}}" alt="">
         </div>
         <div class="span2">
           <img src="{{{asset('images/order/product_16.jpg')}}}" alt="">

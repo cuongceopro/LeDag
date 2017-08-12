@@ -12,7 +12,7 @@
     </p>
 
     <div align="center">
-    <a href="{!! URL::to('/ledaq') !!}" class="defaultBtn">ホームに戻る</a>
+    <a href="{!! URL::to('/') !!}" class="defaultBtn">ホームに戻る</a>
     </div>
     </section>
 

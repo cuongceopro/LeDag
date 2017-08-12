@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/ledaq', 'PostsController@ledaq');
+Route::get('/', 'PostsController@ledaq');
 
 Route::get('/company', 'PostsController@company');
 
@@ -49,9 +49,9 @@ Route::get('/products', 'Front@products');
 Route::get('/add', 'GoodsController@add');
 
 
-Route::get('/', function () {
-    return redirect('shop');
-});
+// Route::get('/', function () {
+//     return redirect('shop');
+// });
 
 Route::get('/test', function () {
     return view('test');
@@ -102,3 +102,6 @@ Route::get('/manage/order_todo/{id?}', 'HomeController@order_todo');
 
 Route::get('/manage/creat_event', 'HomeController@create_event');
 Route::post('/manage/event_store', 'PostsController@event_store');
+
+Route::get('/manage', 'HomeController@manage');
+

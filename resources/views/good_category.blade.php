@@ -11,7 +11,7 @@
         <div class="well well-small">
           <div class="row-fluid">
             <div class="span2">
-              <img src="/images/product/{{$category_good->image1 }}" alt="">
+              <img src=" /ledaq/images/product/{{$category_good->image1 }} " alt="">
             </div>
             <div class="span6">
               <h5>{{ $category_good->name }} </h5>

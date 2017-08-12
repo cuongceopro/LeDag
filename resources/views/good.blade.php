@@ -22,21 +22,21 @@
   <div id="myCarousel" class="carousel slide cntr">
             <div class="carousel-inner">
               <div class="item active">
-               <a href="#"> <img src="/images/product/{{$good->image1 }}" alt="" style="width:100%"></a>
+               <a href="#"> <img src="/ledaq/images/product/{{$good->image1 }}" alt="" style="width:100%"></a>
               </div>
               @if ($good->image2 !== null)
               <div class="item">
-                 <a href="#"> <img src="/images/product/{{$good->image2 }}" alt="" style="width:100%"></a>
+                 <a href="#"> <img src="/ledaq/images/product/{{$good->image2 }}" alt="" style="width:100%"></a>
               </div>
               @endif
               @if ($good->image3 !== null)
               <div class="item">
-                <a href="#"> <img src="/images/product/{{$good->image3 }}" alt="" style="width:100%"></a>
+                <a href="#"> <img src="/ledaq/images/product/{{$good->image3 }}" alt="" style="width:100%"></a>
               </div>
               @endif
               @if ($good->image4 !== null)
               <div class="item">
-                <a href="#"> <img src="/images/product/{{$good->image4 }}" alt="" style="width:100%"></a>
+                <a href="#"> <img src="/ledaq/images/product/{{$good->image4 }}" alt="" style="width:100%"></a>
               </div>
               @endif
             </div>

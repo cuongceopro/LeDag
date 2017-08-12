@@ -50,7 +50,7 @@
   			events: [
   				{
   					title: 'Sale',
-            url: 'company',
+            //url: 'company',
   					start: '2017-08-07',
             end: '2017-08-09'
   				},
@@ -138,7 +138,7 @@
 
   <header>
     <div class="inner">
-      <p id="logo"><a href="{!! URL::to('ledaq') !!}"><img src="{{{asset('images/home/logo5.png')}}}" width="330" height="45" alt=""></a></p>
+      <p id="logo"><a href="{!! URL::to('/') !!}"><img src="{{{asset('images/home/logo5.png')}}}" width="330" height="45" alt=""></a></p>
       <p id="cart"><a href="{!! URL::to('cart') !!}">カートをみる</a></p>
     </div>
   </header>
