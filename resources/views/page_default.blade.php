@@ -180,6 +180,7 @@
               <li><a href="{!! URL::to('category/1') !!}">手刺繍ギフト</a></li>
               <li><a href="{!! URL::to('category/2') !!}">AKIKALE</a></li>
               <li><a href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
+              <li><a href="{!! URL::to('category/7') !!}">日本藍染</a></li>
               <li><a href="{!! URL::to('category/4') !!}">その他</a></li>
               <li><a href="{!! URL::to('order') !!}">オーダーメイド&リメーク</a></li>
               <li><a href="{!! URL::to('rental') !!}">レンタル</a></li>
