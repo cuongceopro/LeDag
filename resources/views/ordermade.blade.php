@@ -13,82 +13,84 @@
     <br />
 
     <p style="text-align:center">
-      お好きなデザイン・生地で、お客様のサイズにぴったりあったお洋服をお作りします。
+      お好きなデザイン・生地で、お客様のサイズにぴったりあったお洋服をお作りします。<br>
+      On - demand tailoring, Fabric and other materials: based on clients' demand and interests.
     </p>
     <p style="text-align:center">
-      仮縫い1っ回つきで、お忙しい方でも無理なく、お洋服が出来ます。
+      仮縫い1回込み<br>
+      Including one try-on before completion.
     </p>
     <p style="text-align:center">
-      お客様のご希望に沿ったお洋服を、相談しながら、丁寧にお作り出来ます。
+      お客様のご希望に沿ったお洋服を、相談しながら、丁寧にお作り出来ます。<br>
+      We commit to complete our clients' products with our highest carefullness based on their demands.
     </p>
 
-    <h3>フルオーダーの流れ</h3>
+    <h3>フルオーダーの流れ(Order process)</h3>
 
     <p>
-      STEP 1: ご予約/デザイン
+      STEP 1: ご予約/デザイン(Contacting - Designing)
       <img src="{{{asset('images/order/1.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 2: 採寸
+      STEP 2: 採寸(Measuring)
       <img src="{{{asset('images/order/2.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 3: パターン/仮縫い
+      STEP 3: パターン/仮縫い(Cutting - Forming)
       <img src="{{{asset('images/order/3.png')}}}" alt="">
     </p>
 
     <p>
-      STEP 4: 縫製
+      STEP 4: 縫製(Tailoring)
       <img src="{{{asset('images/order/4.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 4: 発送<br>
-      納期約1.5か月～2か月間（混み具合に前後します）
+      STEP 5: 発送(Delivering)<br>
+      納期約1.5か月～2か月間（混み具合に前後します）<br>
+      Shipping within 45-60 days (depending on different factors)
     </p>
 
     </br>
 
-    <h3>料金一覧</h3>
+    <h3>料金一覧(Price)</h3>
 
     <table class="ta1">
       <tr>
-        <th>種類</th>
-        <td>価格</td>
+        <th>種類(Type)</th>
+        <td>価格(Price)</td>
       </tr>
       <tr>
-        <th>トップス</th>
+        <th>トップス(tops)</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>スカート</th>
+        <th>スカート(skirt)</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>パンツ</th>
+        <th>パンツ(pants)</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>ワンピース</th>
+        <th>ワンピース(one-piece)</th>
         <td>6000円〜</td>
       </tr>
       <tr>
-        <th>ジャケット</th>
+        <th>ジャケット(jaket)</th>
         <td>18000円〜</td>
       </tr>
       <tr>
-        <th>コート</th>
+        <th>コート(coat)</th>
         <td>18000円〜</td>
       </tr>
     </table>
+      <p><font color="red">※生地代は別途かかります<br>Excluding fabric cost</font></p>
     <br />
 
-    <h3>マイパターンを承ります</h3>
-    <p>
-      お客様のお気に入りのお洋服と同じ形のお洋服をお作りします。
-    </p>
+    <h3>マイパターンを承ります(My pattern)</h3>
 
     <div class="well well-small">
       <div class="row-fluid">
@@ -154,6 +156,10 @@
         </div>
       </div>
     </div>
+    <br />
+
+    <h3>リフォーム(Reform)</h3>
+    <img src="{{{asset('images/order/5.png')}}}" alt="">
 
   </section>
 
