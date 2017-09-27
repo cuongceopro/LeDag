@@ -109,6 +109,7 @@
 <!--<tr class="techSpecRow"><td class="techSpecTD1">Color:</td><td class="techSpecTD2">Black</td></tr>-->
 <tr class="techSpecRow"><td class="techSpecTD1">品番:</td><td class="techSpecTD2">{{ $good->code }}</td></tr>
 <tr class="techSpecRow"><td class="techSpecTD1">色:</td><td class="techSpecTD2">{{ $good->color }}</td></tr>
+<tr class="techSpecRow"><td class="techSpecTD1">サイズ:</td><td class="techSpecTD2">{{ $good->size }}</td></tr>
 </tbody>
 </table>
 
