@@ -14,13 +14,16 @@ use Redirect;
 use App\Post;
 use Validator;
 use Input;
+use App;
 
 class PostsController extends BaseController
 {
     public function ledaq()
     {
+      $locale = App::getLocale();
+      //echo $locale;
       $posts = Post::all();
-      return View::make('ledaq')->with('posts', $posts);
+      return View::make('ledaq')->with(['posts' => $posts, 'locale' => $locale]);
     }
 
     public function company()

@@ -32,7 +32,7 @@
      ?>
 
     <section id="new" class="box">
-      <h2 id="newinfo_hdr" class="close">更新情報・お知らせ</h2>
+      <h2 id="newinfo_hdr" class="close">{{ __('messages.information') }}</h2>
       <!--<h2>更新情報・お知らせ</h2>-->
       <dl id="newinfo">
         @foreach($posts as $post)
@@ -59,3 +59,5 @@
   <!--/main-->
 
   @stop
+
+{{ __('messages.nav_welcome') }}

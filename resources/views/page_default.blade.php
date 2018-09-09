@@ -139,10 +139,26 @@
   <header>
     <div class="inner">
       <p id="logo"><a href="{!! URL::to('ledaq') !!}"><img src="{{{asset('images/home/logo5.png')}}}" width="330" height="45" alt=""></a></p>
-      <p id="cart"><a href="{!! URL::to('cart') !!}">カートをみる</a></p>
+      <p id="cart"><a href="{!! URL::to('cart') !!}">{{ __('messages.cart') }}</a></p>
     </div>
   </header>
 
+
+      <!-- 言語切り替え -->
+      <li class="dropdown" id="nav-lang">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        {{ Config::get('languages')[config('app.locale')] }}
+    <span class="caret"></span></a>
+    <ul>
+        @foreach (Config::get('languages') as $lang => $language)
+            @if ($lang != config('app.locale'))
+                <li>
+                    <a href="{!! URL::to('/lang/'.$lang.'') !!}">{{$language}}</a>
+                </li>
+            @endif
+        @endforeach
+    </ul>
+</li>
 
   <nav id="menubar">
     <ul>
@@ -175,20 +191,20 @@
         <div id="sub">
 
           <nav class="box1">
-            <h2>カテゴリ一覧</h2>
+            <h2>{{ __('messages.category') }}</h2>
             <ul>
-              <li><a href="{!! URL::to('category/1') !!}">手刺繍ギフト</a></li>
+              <li><a href="{!! URL::to('category/1') !!}">{{ __('messages.hand_embroidery_gift') }}</a></li>
               <li><a href="{!! URL::to('category/2') !!}">AKIKALE</a></li>
               <li><a href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
-              <li><a href="{!! URL::to('category/4') !!}">その他</a></li>
-              <li><a href="{!! URL::to('order') !!}">オーダーメイド&リメーク</a></li>
-              <li><a href="{!! URL::to('rental') !!}">レンタル</a></li>
+              <li><a href="{!! URL::to('category/4') !!}">{{  __('messages.other') }}</a></li>
+              <li><a href="{!! URL::to('order') !!}">{{  __('messages.order_made_remake') }}</a></li>
+              <li><a href="{!! URL::to('rental') !!}">{{ __('messages.rental') }}</a></li>
             </ul>
           </nav>
 
 
           <section class="box">
-            <h2>カレンダー</h2>
+            <h2>{{ __('messages.calendar') }}</h2>
             <!--<div id="cal1" style="padding:10px"></div>
             <div id="cal2" style="padding:10px"></div>-->
             <!--<img src="{{{asset('images/sample_cal.png')}}}" width="188" height="140"><br>-->
@@ -197,10 +213,10 @@
 
 
             <aside>
-              <h2>オンライン限定セール</h2>
+              <h2>{{ __('messages.online_only_sales') }}</h2>
               <ul class="submenu">
-                <li><a href="{!! URL::to('shoppingguide') !!}">ショッピングガイド</a></li>
-                <li><a href="{!! URL::to('pay') !!}">お支払い方法</a></li>
+                <li><a href="{!! URL::to('shoppingguide') !!}">{{ __('messages.shopping_guide') }}</a></li>
+                <li><a href="{!! URL::to('pay') !!}">{{ __('messages.payment_method') }}</a></li>
                 <!--<li><a href="#">制作工程</a></li>-->
               </ul>
             </aside>
@@ -213,8 +229,8 @@
 
 
         <ul id="footermenu">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="{!! URL::to('ledaq') !!}">{{ __('messages.home') }}</a></li>
+          <li><a href="{!! URL::to('contact') !!}">{{ __('messages.contact') }}</a></li>
         </ul>
 
         <p id="pagetop"><a href="#">↑ PAGE TOP</a></p>
@@ -223,7 +239,7 @@
       <!--/contents-->
 
       <footer>
-        <small>Copyright&copy; 2017 <a href="index.html">LeDag Shop</a> All Rights Reserved.</small>
+        <small>Copyright&copy; 2017 <a href="{!! URL::to('ledaq') !!}">LeDag Shop</a> All Rights Reserved.</small>
         <span class="pr"><a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
       </footer>
 

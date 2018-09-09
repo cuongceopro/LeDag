@@ -5,7 +5,7 @@
 <div id="main">
 
   <section class="box">
-    <h2>オーダーメイド&リメーク</h2>
+    <h2>{{ __('messages.order_made_remake') }}</h2>
 
     <br />
     <img src="{{{asset('images/order/ordermade.png')}}}" height="300" alt="">
@@ -13,84 +13,80 @@
     <br />
 
     <p style="text-align:center">
-      お好きなデザイン・生地で、お客様のサイズにぴったりあったお洋服をお作りします。<br>
-      On - demand tailoring, Fabric and other materials: based on clients' demand and interests.
+      {{ __('messages.order_made_remake_detail_1') }} 
     </p>
     <p style="text-align:center">
-      仮縫い1回込み<br>
-      Including one try-on before completion.
+      {{ __('messages.order_made_remake_detail_2') }} 
     </p>
     <p style="text-align:center">
-      お客様のご希望に沿ったお洋服を、相談しながら、丁寧にお作り出来ます。<br>
-      We commit to complete our clients' products with our highest carefullness based on their demands.
+      {{ __('messages.order_made_remake_detail_3') }} 
     </p>
 
-    <h3>フルオーダーの流れ(Order process)</h3>
+    <h3>{{ __('messages.order_process') }} </h3>
 
     <p>
-      STEP 1: ご予約/デザイン(Contacting - Designing)
+      STEP 1: {{ __('messages.order_process_detail_1') }}
       <img src="{{{asset('images/order/1.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 2: 採寸(Measuring)
+      STEP 2: {{ __('messages.order_process_detail_2') }}
       <img src="{{{asset('images/order/2.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 3: パターン/仮縫い(Cutting - Forming)
+      STEP 3: {{ __('messages.order_process_detail_3') }}
       <img src="{{{asset('images/order/3.png')}}}" alt="">
     </p>
 
     <p>
-      STEP 4: 縫製(Tailoring)
+      STEP 4: {{ __('messages.order_process_detail_4') }}
       <img src="{{{asset('images/order/4.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 5: 発送(Delivering)<br>
-      納期約1.5か月～2か月間（混み具合に前後します）<br>
-      Shipping within 45-60 days (depending on different factors)
+      STEP 5: {{ __('messages.order_process_detail_5') }}<br>
+      {{ __('messages.order_process_detail_5_1') }}
     </p>
 
     </br>
 
-    <h3>料金一覧(Price)</h3>
+    <h3>{{ __('messages.price_list') }}</h3>
 
     <table class="ta1">
       <tr>
-        <th>種類(Type)</th>
-        <td>価格(Price)</td>
+        <th>{{ __('messages.type') }}</th>
+        <td>{{ __('messages.price') }}</td>
       </tr>
       <tr>
-        <th>トップス(tops)</th>
+        <th>{{ __('messages.tops') }}</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>スカート(skirt)</th>
+        <th>{{ __('messages.skirt') }}</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>パンツ(pants)</th>
+        <th>{{ __('messages.pants') }}</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>ワンピース(one-piece)</th>
+        <th>{{ __('messages.one_piece') }}</th>
         <td>6000円〜</td>
       </tr>
       <tr>
-        <th>ジャケット(jaket)</th>
+        <th>{{ __('messages.jacket') }}</th>
         <td>18000円〜</td>
       </tr>
       <tr>
-        <th>コート(coat)</th>
+        <th>{{ __('messages.coat') }}</th>
         <td>18000円〜</td>
       </tr>
     </table>
-      <p><font color="red">※生地代は別途かかります<br>Excluding fabric cost</font></p>
+      <p><font color="red">※{{ __('messages.notice') }}</font></p>
     <br />
 
-    <h3>マイパターンを承ります(My pattern)</h3>
+    <h3>{{ __('messages.my_pattern') }}</h3>
 
     <div class="well well-small">
       <div class="row-fluid">
@@ -158,7 +154,7 @@
     </div>
     <br />
 
-    <h3>リフォーム(Reform)</h3>
+    <h3>{{ __('messages.reform') }}</h3>
     <img src="{{{asset('images/order/5.png')}}}" alt="">
 
   </section>
