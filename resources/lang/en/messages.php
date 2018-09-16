@@ -159,5 +159,14 @@ return [
     'input_custom_info' => 'Input the customer information',
     'payment' => 'Payment',
     'payment_1' => 'After the order is confirmed, we will send you a payment guide email.',
-    'payment_2' => 'Please pay according to the instructions.'
+    'payment_2' => 'Please pay according to the instructions.',
+    /*
+    |-----------------------------------------------------------------
+    | resources/views/goods.blade.php
+    |-----------------------------------------------------------------
+    */
+    'good_quantity' => 'Quantity',
+    'good_color' => 'Color',
+    'good_detail_information' => 'Detail Information',
+    'good_code' => 'Product Code',
 ];

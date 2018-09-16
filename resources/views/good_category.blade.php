@@ -14,9 +14,18 @@
               <img src="/images/product/{{$category_good->image1 }}" alt="">
             </div>
             <div class="span6">
-              <h5>{{ $category_good->name }} </h5>
+              <h5>
+                @if(config('app.locale') == 'en') 
+                  {{ $category_good->name_en }} 
+                @else
+                  {{ $category_good->name }}
+                @endif
+              </h5>
               <?php
-              echo $category_good->summary;
+                if(config('app.locale') == 'en')
+                  echo $category_good->summary_en;
+                else
+                echo $category_good->summary;
                ?>
                <!--
               <p>
