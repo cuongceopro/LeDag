@@ -22,11 +22,11 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function ledaq()
-    {
-      $posts = Post::all();
-      return View::make('ledaq')->with('posts', $posts);
-    }
+    // public function ledaq()
+    // {
+    //   $posts = Post::all();
+    //   return View::make('ledaq')->with('posts', $posts);
+    // }
 
     /**
      * Show the application dashboard.

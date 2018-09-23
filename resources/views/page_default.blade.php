@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>LeDag Shop</title>
+  <title>LeDaq Shop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="copyright" content="Template Party">
   <meta name="description" content="ここにサイト説明を入れます">
@@ -214,17 +214,18 @@
 
 
         <ul id="footermenu">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="{!! URL::to('/') !!}">ホーム</a></li>
+          <li><a href="{!! URL::to('/contact') !!}">お問い合わせ</a></li>
         </ul>
-
-        <p id="pagetop"><a href="#">↑ PAGE TOP</a></p>
 
       </div>
       <!--/contents-->
 
       <footer>
-        <small>Copyright&copy; 2017 <a href="index.html">LeDag Shop</a> All Rights Reserved.</small>
+      <a href="{!! URL::to('https://www.facebook.com/Le.DaqLLC/') !!}"><img src="{{{asset('images/home/facebook.jpeg')}}}" width="25" height="25" alt=""></a>
+      <a href="{!! URL::to('http://www.pictame.com/user/le.daq/4171463563') !!}"><img src="{{{asset('images/home/instagram.jpeg')}}}" width="25" height="25" alt=""></a>
+      <br />
+        <small>Copyright&copy; 2017 <a href="index.html">LeDaq Shop</a> All Rights Reserved.</small>
         <span class="pr"><a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
       </footer>
 

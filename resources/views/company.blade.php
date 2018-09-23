@@ -6,55 +6,52 @@
   <section>
     <h2>会社情報</h2>
     <br />
-    <h3>会社概要(Company Infomation)</h3>
+    <h3>会社概要</h3>
     <table class="ta1">
     <tr>
-    <th>社名<br>(Company Name)</th>
+    <th>社名</th>
     <td>レダクォー合同会社 (Le.Daq LLC)</td>
     </tr>
     <tr>
-    <th>所在地<br>(Address)</th>
+    <th>所在地</th>
     <td>〒110-0013 東京都台東区入谷2-3-2-504号</td>
     </tr>
     <tr>
-    <th>連絡先<br>(Contact Information)</th>
+    <th>連絡先</th>
     <td>Tel: 03-5849-4079<br />Mail: info@ledaq.com</td>
     </tr>
     <tr>
-    <th>営業時間<br>(Business Hours)</th>
+    <th>営業時間</th>
     <td>10:30~19:00 (最終受付時間)</td>
     </tr>
     <tr>
-    <th>設立<br>(Formation)</th>
+    <th>設立</th>
     <td>2016年6月27日</td>
     </tr>
     <tr>
-    <th>代表者<br>(Director)</th>
+    <th>代表者</th>
     <td>レ　ティ　トゥ　フォン (Le Thi Thu Huong)</td>
     </tr>
     <tr>
-    <th>事業内容<br>(Business Activities)</th>
+    <th>事業内容</th>
     <td>
       ・フルオーダーメード<br />・その他オリジナル商品の生産<br />・大量ハンドメイド刺繍<br />
-      ・On - demand tailoring<br />・Original producing<br />・Bulk Embroidering<br />
     </td>
     </tr>
     <tr>
-    <th>お取り扱いブランド<br>(Treated brands)</th>
+    <th>お取り扱いブランド</th>
     <td>
+      AKIKA LE<br>
+      <p>
+        コンセプト：各国の衣装研究。ハイクオリティを提供します。女性がいくつになっても自分らしく、美しく輝く人生を当たり前に楽しむ事を応援します。
+      </p>
       KAORU ZHOU<br>
       <p>
         <b>コンセプト</b>: 前衛的な要素を取り入れつつも服飾の伝統を受け継き、独自の感性で新たな<i>「次代のスタンダード」</i>を構築。
         デザイン性の高いファッションを提案していく。 <br>
-        Concept: Inheriting the tradition of clothing while incorporating avant-garde elements, building a new "Next Standard" due to their own sensitivity. High design can be found when a person wears a new personality for themselves and a new faction close to propose.<br>
         <b>URL</b>: <a href="http://www.kaoruzhou.com/">http://www.kaoruzhou.com/</a> <br>
         <b>Instagram</b>: kaoruzhou <br>
         <b>Facebook</b>: KAORU ZHOU
-      </p>
-      AKIKA LE<br>
-      <p>
-        コンセプト：各国の衣装研究。ハイクオリティを提供します。女性がいくつになっても自分らしく、美しく輝く人生を当たり前に楽しむ事を応援します。<br>
-        Concept: Doing research about traditional costumes of countries, providing high-quality costumes, supporting all women at all ages shine with their own beauty.
       </p>
     </td>
     </tr>
@@ -67,15 +64,13 @@
         <b>AKIKA LE</b><br>
         <p>
         東京ファッション専門学校卒業後、Le.Daqに配属デザイナー・パターンナー任務<br>
-        過去:オーだ―メイド専門店で7年豊かな経験を果てました。2017年KAORU ZHOUブランド立ち上げ。<br />
-        After graduating from Tokyo Fashion Academy, AKIKA LE has been working as a designer and a pattern maker at Le.Daq LLC. With rich experience of 7 years doing handmade tailoring, she founded KAORU ZHOU brand.
+        過去:オーだ―メイド専門店で7年豊かな経験を果てました。2017年KAORU ZHOUブランド立ち上げ。
       </p>
 
         <b>URAKAWA KAORU</b><br>
           <p>
             東京ファッション専門学校卒業後、同年東京で個人展示会ưお行い。第2回パールデザインコンテスト入選<br>
-            中国深市光影ファッション学院に展示wo 行いました。2017年KAORU ZHOUブランド立ち上げ。<br>
-            She graduated from Tokyo Fashion Academy and held an exhibition in Tokyo in the same year. She won the prize in the second pearl design competition. In 2016, She held an exhibition at Shenzhen Fashion Academy, China. In 2017, she founded KAORU ZHOU brand.
+            中国深市光影ファッション学院に展示wo 行いました。2017年KAORU ZHOUブランド立ち上げ。
           </p>
       </td>
     </tr>
