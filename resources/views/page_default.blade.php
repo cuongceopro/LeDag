@@ -138,13 +138,23 @@
 
   <header>
     <div class="inner">
-      <p id="logo"><a href="{!! URL::to('ledaq') !!}"><img src="{{{asset('images/home/logo5.png')}}}" width="330" height="45" alt=""></a></p>
-      <p id="cart"><a href="{!! URL::to('cart') !!}">{{ __('messages.cart') }}</a></p>
+      <p id="logo">
+        <a href="{!! URL::to('ledaq') !!}"><img src="{{{asset('images/home/logo5.png')}}}" width="330" height="45" alt=""></a>
+        <!-- 
+        <button type="submit" class="defaultBtn">JP</button>
+        <button type="submit" class="defaultBtn">EN</button>
+        -->
+      </p>
+
+      <p id="cart">
+        <a href="{!! URL::to('cart') !!}">{{ __('messages.cart') }}</a>
+      </p>
     </div>
   </header>
 
 
       <!-- 言語切り替え -->
+      <!--
       <li class="dropdown" id="nav-lang">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
         {{ Config::get('languages')[config('app.locale')] }}
@@ -158,7 +168,8 @@
             @endif
         @endforeach
     </ul>
-</li>
+  </li>
+  -->
 
   <nav id="menubar">
     <ul>
@@ -167,6 +178,22 @@
       <li><a href="{!! URL::to('category/2') !!}">AKIKALE</a></li>
       <li><a href="{!! URL::to('category/3') !!}">KAORU ZHOU</a></li>
       <li><a href="{!! URL::to('contact') !!}">CONTACT</a></li>
+
+
+      <li><a>
+  <div class="language_dropdown">
+    <button class="language_dropbtn">LANGUAGE
+    <span class="caret"></span></i>
+    </button>
+    <div class="language_dropdown-content">
+      <a href="{!! URL::to('/lang/jp') !!}">日本語</a>
+      <a href="{!! URL::to('/lang/en') !!}">English</a>
+    </div>
+  </div> 
+  </a>
+      </li>
+
+      
     </ul>
   </nav>
 

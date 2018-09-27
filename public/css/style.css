@@ -129,7 +129,7 @@ nav#menubar ul {
 /*メニュー１個ごとの設定*/
 nav#menubar ul li {
 	float: left;
-	width: 198px;	/*メニュー幅*/
+	width: 165px;	/*メニュー幅*/
 	border-right: 1px solid #ccc;	/*メニューの右側の線の幅、線種、色*/
 	text-align: center;	/*文字を中央に揃える*/
 }
@@ -1046,3 +1046,74 @@ margin:10px 0px 10px 0px;
   height: 100%;
   margin:10px 0px 10px 0px;
 }
+
+/* Dropdown用 */
+/* Navbar container */
+.language_navbar {
+	/* overflow: hidden; */
+	/* background-color: #333; */
+	/*font-family: Arial;*/
+  }
+  
+  /* Links inside the navbar */
+  .language_navbar language_a {
+	/* float: left; */
+	/* font-size: 16px; */
+	/*color: white;*/
+	/* text-align: center; */
+	/* padding: 14px 16px; */
+	/* text-decoration: none; */
+  }
+  
+  /* The dropdown container */
+  .language_dropdown {
+	/* float: left;
+	overflow: hidden; */
+  }
+  
+  /* Dropdown button */
+  .language_dropdown .language_dropbtn {
+	/* font-size: 16px;  */
+	border: none;
+	outline: none;
+	/*color: white;*/
+	/* padding: 14px 16px; */
+	background-color: inherit;
+	/*font-family: inherit;*/ /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .language_navbar language_a:hover, .language_dropdown:hover .language_dropbtn {
+	background-color:#95a5a6;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .language_dropdown-content {
+	display: none;
+	/* position: absolute; */
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 3;
+  }
+  
+  /* Links inside the dropdown */
+  .language_dropdown-content language_a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .language_dropdown-content language_a:hover {
+	background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .language_dropdown:hover .language_dropdown-content {
+	display: block;
+  }

@@ -60,4 +60,4 @@
 
   @stop
 
-{{ __('messages.nav_welcome') }}
+<!-- {{ __('messages.nav_welcome') }} -->

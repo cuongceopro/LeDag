@@ -7,7 +7,7 @@ return [
     | resources/views/page_default.blade.php
     |-----------------------------------------------------------------
     */
-    'cart' => 'カートを\<br\>みる',
+    'cart' => 'カートをみる',
     'category' => 'カテゴリー一覧',
     'hand_embroidery_gift' => '手刺繍ギフト',
     'other' => 'その他',
