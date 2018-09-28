@@ -14,9 +14,19 @@
               <img src=" /ledaq/images/product/{{$category_good->image_summary }} " alt="">
             </div>
             <div class="span6">
-              <h5>{{ $category_good->name }} </h5>
+              <h5>
+                @if(config('app.locale') == 'en' && $category_good->name_en) 
+                  {{ $category_good->name_en }} 
+                @else
+                  {{ $category_good->name }}
+                @endif
+              </h5>
+
               <?php
-              echo $category_good->summary;
+                if(config('app.locale') == 'en' && $category_good->summary_en)
+                  echo $category_good->summary_en;
+                else
+                echo $category_good->summary;
                ?>
                <!--
               <p>

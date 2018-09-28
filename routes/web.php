@@ -106,3 +106,16 @@ Route::post('/manage/event_store', 'PostsController@event_store');
 
 Route::get('/manage', 'HomeController@manage');
 
+use App\Post;
+ Route::get('welcome/{locale}', function ($locale) {
+    App::setLocale('jp');
+    echo App::getLocale();
+    echo Config::get('app.locale');
+    Session::put('applocale','jp');
+    $locale = App::getLocale();
+    $posts = Post::all();
+    return View::make('ledaq')->with(['posts' => $posts, 'locale' => $locale]);
+    // return Redirect::back();
+});
+ Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
+

@@ -5,7 +5,8 @@
 <div id="main">
 
   <section class="box">
-    <h2>オーダーメイド&リメーク</h2>
+    <h2>{{ __('messages.order_made_remake') }}</h2>
+
 
     <br />
     <img src="{{{asset('images/order/ordermade.png')}}}" height="300" alt="">
@@ -13,81 +14,82 @@
     <br />
 
     <p style="text-align:center">
-      お好きなデザイン・生地で、お客様のサイズにぴったりあったお洋服をお作りします。
+      {{ __('messages.order_made_remake_detail_1') }}
     </p>
     <p style="text-align:center">
-      仮縫い1っ回つきで、お忙しい方でも無理なく、お洋服が出来ます。
+      {{ __('messages.order_made_remake_detail_2') }} 
     </p>
     <p style="text-align:center">
-      お客様のご希望に沿ったお洋服を、相談しながら、丁寧にお作り出来ます。
+      {{ __('messages.order_made_remake_detail_3') }} 
     </p>
 
-    <h3>フルオーダーの流れ</h3>
+    <h3>{{ __('messages.order_process') }} </h3>
 
     <p>
-      STEP 1: ご予約/デザイン
+      STEP 1: {{ __('messages.order_process_detail_1') }}
       <img src="{{{asset('images/order/1.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 2: 採寸
+      STEP 2: {{ __('messages.order_process_detail_2') }}
       <img src="{{{asset('images/order/2.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 3: パターン/仮縫い
+      STEP 3: {{ __('messages.order_process_detail_3') }}
       <img src="{{{asset('images/order/3.png')}}}" alt="">
     </p>
 
     <p>
-      STEP 4: 縫製
+      STEP 4: {{ __('messages.order_process_detail_4') }}
       <img src="{{{asset('images/order/4.jpg')}}}" alt="">
     </p>
 
     <p>
-      STEP 4: 発送<br>
-      納期約1.5か月～2か月間（混み具合に前後します）
+      STEP 5: {{ __('messages.order_process_detail_5') }}<br>
+      {{ __('messages.order_process_detail_5_1') }}
     </p>
 
     </br>
 
-    <h3>料金一覧</h3>
+    <h3>{{ __('messages.price_list') }}</h3>
 
     <table class="ta1">
       <tr>
-        <th>種類</th>
-        <td>価格</td>
+        <th>{{ __('messages.type') }}</th>
+        <td>{{ __('messages.price') }}</td>
       </tr>
       <tr>
-        <th>トップス</th>
+        <th>{{ __('messages.tops') }}</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>スカート</th>
+        <th>{{ __('messages.skirt') }}</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>パンツ</th>
+        <th>{{ __('messages.pants') }}</th>
         <td>7000円〜</td>
       </tr>
       <tr>
-        <th>ワンピース</th>
+        <th>{{ __('messages.one_piece') }}</th>
         <td>6000円〜</td>
       </tr>
       <tr>
-        <th>ジャケット</th>
+        <th>{{ __('messages.jacket') }}</th>
         <td>18000円〜</td>
       </tr>
       <tr>
-        <th>コート</th>
+        <th>{{ __('messages.coat') }}</th>
         <td>18000円〜</td>
       </tr>
     </table>
+    <p><font color="red">※{{ __('messages.notice') }}</font></p>
     <br />
 
-    <h3>マイパターンを承ります</h3>
+    <h3>{{ __('messages.my_pattern') }}</h3>
     <p>
-      お客様のお気に入りのお洋服と同じ形のお洋服をお作りします。
+      {{ __('messages.my_pattern_detail') }}
     </p>
 
     <div class="well well-small">
@@ -154,6 +156,9 @@
         </div>
       </div>
     </div>
+
+    <h3>{{ __('messages.reform') }}</h3>
+    <img src="{{{asset('images/order/5.png')}}}" alt="">
 
   </section>
 

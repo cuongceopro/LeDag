@@ -29,13 +29,13 @@
     <table class="table table-bordered table-condensed">
       <thead>
         <tr>
-          <th>商品</th>
-          <th>商品名</th>
-          <th>品番</th>
-          <th>色</th>
-          <th>単価</th>
-          <th>数量</th>
-          <th>合計</th>
+          <th>Product</th>
+          <th>Product Name</th>
+          <th>Code</th>
+          <th>Color</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
         </tr>
       </thead>
       <tbody>
@@ -80,11 +80,11 @@
         ?>
 
         <tr>
-          <td colspan="6" class="alignR">税金:	</td>
+          <td colspan="6" class="alignR">Tax:	</td>
           <td> ¥{{ Cart::instance('default')->tax() }}</td>
         </tr>
         <tr>
-          <td colspan="6" class="alignR">合計:	</td>
+          <td colspan="6" class="alignR">Total:	</td>
           <td> ¥{{ Cart::total() }}</td>
         </tr>
       </tbody>

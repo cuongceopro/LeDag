@@ -8,7 +8,6 @@
     <!--
     <h2>{{ $good->name}}</h2>
     <p>{{ $good->detail }}</p>
-
     <figure class="mb15">
       <img src="{{{asset('images/sample2.jpg')}}}" alt="写真の説明を入れます">
     </figure>
@@ -45,7 +44,14 @@
         </div>
   </div>
     <div class="span7">
-      <div class="h3_shop">{{ $good->name }}</div>
+      <div class="h3_shop">
+        @if(config('app.locale') == 'en' && $good->name_en) 
+          {{ $good->name_en }} 
+        @else
+          {{ $good->name }}
+        @endif
+      </div>
+
       <hr class="soft"/>
 
       <!--<form class="form-horizontal qtyFrm" action="{!! URL::to('/cart/'.$good->id.'') !!}" method="get">-->
@@ -53,15 +59,22 @@
         <div class="control-group">
         <label class="control-label"><span>¥{{ $good->cost}}</span></label>
         <div class="controls">
-        <input type="number" name="quantity" class="span6" placeholder="数量">
+        <input type="number" name="quantity" class="span6" placeholder={{ __('messages.good_quantity') }}>
         </div>
         </div>
 
         <div class="control-group">
-        <label class="control-label"><span>カラー</span></label>
+        <label class="control-label"><span>{{ __('messages.good_color') }}</span></label>
         <div class="controls">
           <select name="color" class="span11">
-            <option selected="selected">{{ $good->color }}</option>
+            <option selected="selected">
+              @if(config('app.locale') == 'en' && $good->color_en) 
+                {{ $good->color_en }} 
+              @else
+                {{ $good->color }}
+              @endif
+            </option>
+
           </select>
         </div>
         </div>
@@ -82,7 +95,10 @@
         <br />
         <?php
         echo '<p>';
-        echo $good->summary;
+        if (config('app.locale') == 'en' && $good->summary_en)
+          echo $good->summary_en;
+        else
+          echo $good->summary;
         echo '</p>';
          ?>
         <br />
@@ -103,19 +119,30 @@
     </div>
     <hr class="softn clr"/>
 
-    <div class="h4_shop">詳細情報</div>
+    <div class="h4_shop">{{ __('messages.good_detail_information') }}</div>
     <table class="table table-striped">
 <tbody>
 <!--<tr class="techSpecRow"><td class="techSpecTD1">Color:</td><td class="techSpecTD2">Black</td></tr>-->
-<tr class="techSpecRow"><td class="techSpecTD1">品番:</td><td class="techSpecTD2">{{ $good->code }}</td></tr>
-<tr class="techSpecRow"><td class="techSpecTD1">色:</td><td class="techSpecTD2">{{ $good->color }}</td></tr>
-<tr class="techSpecRow"><td class="techSpecTD1">サイズ:</td><td class="techSpecTD2">{{ $good->size }}</td></tr>
+<tr class="techSpecRow"><td class="techSpecTD1">{{ __('messages.good_code') }}:</td><td class="techSpecTD2">{{ $good->code }}</td></tr>
+<tr class="techSpecRow"><td class="techSpecTD1">{{ __('messages.good_color') }}:</td><td class="techSpecTD2">
+  @if(config('app.locale') == 'en' && $good->color_en) 
+    {{ $good->color_en }} 
+  @else
+    {{ $good->color }}
+  @endif
+</td></tr>
+
+<tr class="techSpecRow"><td class="techSpecTD1">Size:</td><td class="techSpecTD2">{{ $good->size }}</td></tr>
 </tbody>
 </table>
 
 @if ( $good->detail !== null)
 <p>
-  {{ $good->detail }}
+  @if(config('app.locale') == 'en' && $good->detail_vn) 
+    {{ $good->detail_vn }} 
+  @else
+    {{ $good->detail }}
+  @endif
 </p>
 @endif
 

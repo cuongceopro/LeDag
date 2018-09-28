@@ -5,24 +5,24 @@
 
   <section class="box">
 
-    <h2>ショッピングガイドー</h2>
+    <h2>{{ __('messages.shopping_guide') }}</h2>
     <br />
     <p>
-      STEP 1: 商品を選ぶ
+      STEP 1: {{ __('messages.select_the_items') }}
     </p>
 
     <p>
-      STEP 2: カートを確認する
+      STEP 2: {{ __('messages.check_the_cart') }}
     </p>
 
     <p>
-      STEP 3: お客様情報を入力する
+      STEP 3: {{ __('messages.input_custom_info') }}
     </p>
 
     <p>
-      STEP 4: お支払い
-      注文が確定された後、お支払い案内のメールをお送り致します。<br>
-      案内に従ってお支払いください。
+      STEP 4: {{ __('messages.payment') }}
+      {{ __('messages.payment_1') }}<br>
+      {{ __('messages.payment_2') }}
     </p>
   </section>
 </div>
