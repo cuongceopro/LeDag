@@ -5,7 +5,19 @@
 
   <section>
 
-    <h2>{{ $goodcategory_goods[0]->category->name}}</h2>
+    <h2>
+        @if(config('app.locale') == 'en')
+        	@if($goodcategory_goods[0]->category->id == 1)
+        		Hand Embroidery Gift
+        	@elseif($goodcategory_goods[0]->category->id == 4)
+        		Other
+        	@else
+        		{{ $goodcategory_goods[0]->category->name}}
+        	@endif
+        @else
+            {{ $goodcategory_goods[0]->category->name}}
+      	@endif
+    </h2>
     <!--<p>販売商品のご案内。</p>-->
       @foreach($goodcategory_goods as $category_good)
         <div class="well well-small">
